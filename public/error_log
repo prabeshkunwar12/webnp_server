@@ -1,0 +1,1 @@
+[22-Mar-2023 00:47:56 UTC] PHP Fatal error:  Trait 'CyrildeWit\EloquentViewable\InteractsWithViews' not found in /home1/stuffeds/public_html/app/Models/Posts.php on line 11
