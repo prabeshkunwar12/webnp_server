@@ -95,8 +95,8 @@ setcookie('name1',2,600);
                                 for($i=1; $i<=16; $i++){
                                     echo'
                                         <li>
-                                            <a href ="http://'.$homeCon->getCategoryContent(1).'">
-                                                <h5>&#8827 '.$homeCon->getCategoryName(1).'</h5>
+                                            <a href = "#">
+                                                <h5>&#8827 Default Name</h5>
                                             </a>
                                         </li>
                                     ';

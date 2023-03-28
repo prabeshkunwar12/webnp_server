@@ -13,6 +13,16 @@ class CategoriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+    public function getAllCategories()
+    {
+        $categories = null;
+        $categories = Categories::orderBy('id', 'asc')
+        ->get();
+        
+        return $categories;
+    } 
+    
     public function index()
     {
         //
