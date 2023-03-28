@@ -18,7 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('name');
             $table->string('URL')->nullable();
             $table->string('location')->nullable();
-            $table->string('group')->default('none');
+            $table->string('group')->default('null');
             $table->timestamps();
         });
     }

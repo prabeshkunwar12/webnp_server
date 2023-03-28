@@ -51,84 +51,26 @@ setcookie('name1',2,600);
                 </div>
                 
                     <div class="row">
-                        <div class = "recentarticle-main ">
-                            <a href="<?php echo ("http://".($postCon)->getRecentPostContent(1));?>">
-                            <div class="recentarticle-img">
-                            <img src = "../imgs/wellness-mental-health.jpg" >
-                            </div>
-                            <div class="recentcaption">
-                                A look at the effects of smoking
-                            </div>
-                            </a>
-                            
-                            <div class="seemore_main">
-                                <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(1));?>">SEE MORE</a></div>
-                            </div>
-                            
-                        </div>
-                        <div class = "recentarticle-main vanish">
-                            <a href="<?php echo ("http://".($postCon)->getRecentPostContent(2));?>">
-                            <div class="recentarticle-img">
-                            <img src = "../imgs/wellness-mental-health.jpg" >
-                            </div>
-                            <div class="recentcaption">
-                                How yoga can benefit your heart
-                            </div>
-                            </a>
-                            
-                            <div class="seemore_main">
-                                <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(2));?>">SEE MORE</a></div>
-                            </div>
-                            
-                        </div>
-                        <div class = "recentarticle-main vanish">
-                            <a href="<?php echo ("http://".($postCon)->getRecentPostContent(3));?>">
-                            <div class="recentarticle-img">
-                            <img src = "../imgs/wellness-mental-health.jpg" >
-                            </div>
-                            <div class="recentcaption">
-                                Daily runs: a trend everyone should follow
-                            </div>
-                            </a>
-                            
-                            <div class="seemore_main">
-                                <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(3));?>">SEE MORE</a></div>
-                            </div>
-                            
-                        </div>
-                        <div class = "recentarticle-main vanish">
-                            <a href="<?php echo ("http://".($postCon)->getRecentPostContent(4));?>">
-                            <div class="recentarticle-img">
-                            <img src = "../imgs/wellness-mental-health.jpg" >
-                            </div>
-                            <div class="recentcaption">
-                                Recent advances in Heart Medicine
-                            </div>
-                            </a>
-                            
-                            <div class="seemore_main">
-                                <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(4));?>">SEE MORE</a></div>
-                            </div>
-                            
-                        </div>
-                        
-                        <div class = "recentarticle-main vanish">
-                            <a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">
-                            <div class="recentarticle-img">
-                            <img src = "../imgs/wellness-mental-health.jpg" >
-                            </div>
-                            <div class="recentcaption">
-                                A random article title
-                            </div>
-                            </a>
-                            
-                            <div class="seemore_main">
-                                <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">SEE MORE</a></div>
-                            </div>
-                            
-                        </div>
-                                                
-                    </div>
+                        <?php
+                            for($i=1; $i<=5; $i++){
+                                echo'
+                                    <div class = "recentarticle-main vanish">
+                                        <a href="//">
+                                        <div class="recentarticle-img">
+                                        <img src = "../imgs/wellness-mental-health.jpg" >
+                                        </div>
+                                        <div class="recentcaption">
+                                            A look at the effects of smoking
+                                        </div>
+                                        </a>
+                                        
+                                        <div class="seemore_main">
+                                            <div class="see_more"><a href="//">SEE MORE</a></div>
+                                        </div>
+                                    </div>
+                                ';
+                            }
+                        ?>                             
                     
                 </div>
             </div>
@@ -148,97 +90,18 @@ setcookie('name1',2,600);
                 <div class = "topicsbox container">
                     <ul class="topicslist">
                         <div class="topicscol">
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(1)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(1) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(1)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(1) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(2)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(2) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(3)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(3) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(4)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(4) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(5)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(5) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(6)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(6) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(7)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(7) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(8)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(8) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(1)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(1) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(1)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(1) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(2)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(2) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(3)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(3) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(4)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(4) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(5)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(5) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(6)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(6) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(7)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(7) ?></h5>
-                                </a>
-                            </li>
-                            <li>
-                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(8)) ?>">
-                                    <h5>&#8827   <?php echo $homeCon->getCategoryName(8) ?></h5>
-                                </a>
-                            </li>
                             
+                            <?php
+                                for($i=1; $i<=16; $i++){
+                                    echo'
+                                        <li>
+                                            <a href ="http://'.$homeCon->getCategoryContent(1).'">
+                                                <h5>&#8827 '.$homeCon->getCategoryName(1).'</h5>
+                                            </a>
+                                        </li>
+                                    ';
+                                }
+                            ?>
                         </div>
                     </ul>
                     <hr>
@@ -259,92 +122,26 @@ setcookie('name1',2,600);
             <hr>
         </div>
         <div class="row">
-            <div class = "recentarticle-main">
-                <a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">
-                    <div class="recentarticle-img">
-                    <img src = "../imgs/wellness-health-beauty.webp" >
-                    </div>
-                    <div class="recentcaption">
-                        A look at the effects of smoking
-                    </div>
-                    </a>
+            <?php
+                for($i=1; $i<=5; $i++){
+                    echo'
+                        <div class = "recentarticle-main vanish">
+                            <a href="//">
+                            <div class="recentarticle-img">
+                            <img src = "../imgs/wellness-mental-health.jpg" >
+                            </div>
+                            <div class="recentcaption">
+                                A look at the effects of smoking
+                            </div>
+                            </a>
                             
-                    <div class="seemore_main">
-                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">SEE MORE</a></div>
-                    </div>    
-                    
-            
-            </div>  
-            <div class = "recentarticle-main vanish">
-                <a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">
-                    <div class="recentarticle-img">
-                    <img src = "../imgs/wellness-health-beauty.webp" >
-                    </div>
-                    <div class="recentcaption">
-                        A look at the effects of smoking
-                    </div>
-                    </a>
-                            
-                    <div class="seemore_main">
-                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">SEE MORE</a></div>
-                    </div>    
-                    
-            
-            </div>
-
-
-            <div class = "recentarticle-main">
-                <a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">
-                    <div class="recentarticle-img">
-                    <img src = "../imgs/wellness-health-beauty.webp" >
-                    </div>
-                    <div class="recentcaption">
-                        A look at the effects of smoking
-                    </div>
-                    </a>
-                            
-                    <div class="seemore_main">
-                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">SEE MORE</a></div>
-                    </div>    
-                    
-            
-            </div>  
-            <div class = "recentarticle-main vanish">
-                <a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">
-                    <div class="recentarticle-img">
-                    <img src = "../imgs/wellness-health-beauty.webp" >
-                    </div>
-                    <div class="recentcaption">
-                        A look at the effects of smoking
-                    </div>
-                    </a>
-                            
-                    <div class="seemore_main">
-                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">SEE MORE</a></div>
-                    </div>    
-                    
-            
-            </div>
-
-            <div class = "recentarticle-main">
-                <a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">
-                    <div class="recentarticle-img">
-                    <img src = "../imgs/wellness-health-beauty.webp" >
-                    </div>
-                    <div class="recentcaption">
-                        A look at the effects of smoking
-                    </div>
-                    </a>
-                            
-                    <div class="seemore_main">
-                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">SEE MORE</a></div>
-                    </div>    
-                    
-            
-            </div>  
-            
-            
-            
+                            <div class="seemore_main">
+                                <div class="see_more"><a href="//">SEE MORE</a></div>
+                            </div>
+                        </div>
+                    ';
+                }
+            ?>
         </div>  
     </div>
     </div>    
