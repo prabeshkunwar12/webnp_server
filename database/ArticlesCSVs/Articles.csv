@@ -1,0 +1,342 @@
+﻿id,name,location,URL,group
+1,Rourke Baby Record (0 - 1 month),null,https://www.rourkebabyrecord.ca/walk1,Growth Chart
+2,Rourke Baby Record (2 - 6 month),null,https://www.rourkebabyrecord.ca/walk2,Growth Chart
+3,Rourke Baby Record (9 - 15 month),null,https://www.rourkebabyrecord.ca/walk3,Growth Chart
+4,Rourke Baby Record (18 months - 5 years),null,https://www.rourkebabyrecord.ca/walk4,Growth Chart
+5,Greig Health Record (6 -9 years),null,https://www.cps.ca/uploads/tools/2016-GHR-Ages-6-to-9.pdf,Growth Chart
+6,Greig Health Record (10 - 13 years),null,https://www.cps.ca/uploads/tools/2016-GHR-Ages-10-to-13.pdf,Growth Chart
+7,Greig Health Record (14 - 17 years),null,https://www.cps.ca/uploads/tools/2016-GHR-Ages-14-to-17.pdf,Growth Chart
+8,Length-for-age and Weight-for-age percentiles (Boys birth to 24 months),null,https://www.dietitians.ca/DietitiansOfCanada/media/Documents/WHO%20Growth%20Charts/Set-1-LFA-WFA_Birth-24_BOYS_EN.pdf,WHO Growth Curves
+9,Length-for-age and Weight-for-age percentiles (Girls birth to 24 months),null,https://www.dietitians.ca/DietitiansOfCanada/media/Documents/WHO%20Growth%20Charts/Set-1-LFA-WFA_Birth-24_GIRLS_EN.pdf,WHO Growth Curves
+10,Head Circumference and Weight-for-length percentiles (Boys birth to 24 months),null,https://www.dietitians.ca/DietitiansOfCanada/media/Documents/WHO%20Growth%20Charts/Set-1-HC-WFL_Birth-24_BOYS_EN.pdf,WHO Growth Curves
+11,Head Circumference and Weight-for-length percentiles (Girls birth to 24 months),null,https://www.dietitians.ca/DietitiansOfCanada/media/Documents/WHO%20Growth%20Charts/Set-1-HC-WFL_Birth-24_GIRLS_EN.pdf,WHO Growth Curves
+12,Height-for-age and Weight-for-age percentiles (Boys 2-19 years),null,https://www.dietitians.ca/DietitiansOfCanada/media/Documents/WHO%20Growth%20Charts/Set-1-HFA-WFA_2-19_BOYS_EN.pdf,WHO Growth Curves
+13,Height-for-age and Weight-for-age percentiles (Goys 2-19 years),null,https://www.dietitians.ca/DietitiansOfCanada/media/Documents/WHO%20Growth%20Charts/Set-1-HFA-WFA_2-19_GIRLS_EN_Extended.pdf,WHO Growth Curves
+14,Body Mass Index (Boys 2- 19 years),null,https://www.dietitians.ca/DietitiansOfCanada/media/Documents/WHO%20Growth%20Charts/Set-1-BMI_2-19_BOYS_EN.pdf,WHO Growth Curves
+15,Body Mass Index (Girls 2- 19 years),null,https://www.dietitians.ca/DietitiansOfCanada/media/Documents/WHO%20Growth%20Charts/Set-1-BMI_2-19_GIRLS_EN.pdf,WHO Growth Curves
+16,Research And Resources,null,https://www.protectchildren.ca/en/resources-research/#resources,Pediatrics Abuse
+17,Diagnosis & management of asthma in preschoolers,null,https://www.cps.ca/en/documents/position/asthma-in-preschoolers,Pediatrics Asthma
+18,Managing acute asthma exacerbations,null,https://cps.ca/en/documents/position/managing-an-acute-asthma-exacerbation,Pediatrics Asthma
+19,Asthma – very mild to mild guideline 2021,null,https://cts-sct.ca/wp-content/uploads/2021/02/FINAL-CTS_Very-Mild-and-Mild-Asthma-CPG.pdf,Pediatrics Asthma
+20,Behavioural concerns,null,http://thehub.utoronto.ca/pediatrics/behavioural-concerns/,Pediatrics ADHD
+21,Non-pharmacological interventions: Guide for clinicians,null,https://www.cps.ca/uploads/tools/ADHD-EN-clinician-guide.pdf,Pediatrics ADHD
+22,ADHD Practice Guidelines CADDRA 2018,null,https://www.caddra.ca/wp-content/uploads/CADDRA-Guidelines-4th-Edition_-Feb2018.pdf,Pediatrics ADHD
+23,SNAP IV 26 Teacher and Parent Rating Scale,null,https://www.caddra.ca/pdfs/caddraGuidelines2011SNAP.pdf,Pediatrics ADHD
+24,WEISS Functional Impairment Rating Scale – Parent Report (WFIRS-P),null,https://www.caddra.ca/wp-content/uploads/WFIRS-P.pdf,Pediatrics ADHD
+25,Antibiotics for pediatric patients (2018),null,https://cdn.dal.ca/content/dam/dalhousie/pdf/faculty/medicine/departments/core-units/cpd/academic-detailing/AntibioticsPediatricPatients.pdf,Pediatrics Antibiotics
+26,Standards of Diagnostic Assessment ASD – Position Statement,null,https://www.cps.ca/en/documents/position/asd-diagnostic-assessment,Pediatrics Autism
+27,Early Detection ASD in young children – Position Statement,null,https://www.cps.ca/en/documents/position/asd-early-detection,Pediatrics Autism
+28,Post diagnostic management and Followup care ASD – Position Statement,null,https://www.cps.ca/en/documents/position/asd-post-diagnostic-management,Pediatrics Autism
+29,Autism Canada Resource Publications,null,https://autismcanada.org/resources/publication/,Pediatrics Autism
+30,video: brief resolved unexplained events part 1,null,https://www.pedscases.com/classic-video-approach-otoscopy,Pediatrics ATLEs
+31,video: brief resolved unexplained events part 2,null,https://www.pedscases.com/brief-resolved-unexplained-events-part-2-video,Pediatrics ATLEs
+32,"Bronchiolitis diagnosis, management, monitoring 1-24 months of age",null,https://www.cps.ca/en/documents/position/bronchiolitis,Pediatrics Bronchiolitis
+33,approach to heart murmurs notes,null,https://www.pedscases.com/approach-heart-murmurs,Pediatrics Cardiovascular
+34,heart murmur,null,http://thehub.utoronto.ca/pediatrics/heart-murmur/,Pediatrics Cardiovascular
+35,Comprehensive care guidelines,null,https://www.cps.ca/en/documents/position/comprehensive-care-of-the-ambulatory-child-with-cerebral-palsy-gmfcs-i-and-ii-a-canadian-perspective,Pediatrics Cerebral Palsy
+36,CP health and wellness record: GMFCS levels I and II,null,https://hollandbloorview.ca/sites/default/files/2019-10/CP%20HEALTH%20AND%20WELLNESS%20RECORD%20GMFCS%20I%20and%20II.pdf,Pediatrics Cerebral Palsy
+37,Chronic diseases,null,http://thehub.utoronto.ca/pediatrics/chronic-disease-of-childhood/,Pediatrics Chronic Diseases
+38,video: consoling and bundling a newborn,null,https://www.pedscases.com/consoling-and-bundling-newborns,Pediatrics Confort
+39,Crying,null,http://purplecrying.info/sub-pages/what-is-the-period-of-purple-crying/components-of-the-program.php,Pediatrics Crying
+40,Dehydration,null,http://thehub.utoronto.ca/pediatrics/dehydration/,Pediatrics Dehydration
+41,developmental milestones chart,null,https://www.pedscases.com/developmental-milestones,Pediatrics Development
+42,developmental concerns,null,http://thehub.utoronto.ca/pediatrics/developmental-concerns/,Pediatrics Development
+43,growth and nutrition,null,http://thehub.utoronto.ca/pediatrics/growth-and-nutrition/,Pediatrics Development
+44,well child care – baby records,null,http://thehub.utoronto.ca/pediatrics/well-child-care/,Pediatrics Development
+45,Type 1 Diabetes in Children and Adolescents,null,https://guidelines.diabetes.ca/cpg/chapter34,Pediatrics Diabetes
+46,Type 2 Diabetes in Children and Adolescents,null,https://guidelines.diabetes.ca/cpg/chapter35,Pediatrics Diabetes
+47,video: approach to otoscopy,null,https://www.pedscases.com/classic-video-approach-otoscopy,Pediatrics ENT
+48,acue otitis media notes,null,https://www.pedscases.com/acute-otitis-media,Pediatrics ENT
+49,management of acute otitis media children >6 mos 2016,null,https://www.cps.ca/en/documents/position/acute-otitis-media,Pediatrics ENT
+50,streptococcal pharyngitis notes,null,https://www.pedscases.com/streptococcal-pharyngitis,Pediatrics ENT
+51,otitis media,null,http://thehub.utoronto.ca/pediatrics/otitis-media/,Pediatrics ENT
+52,throat swab,null,http://thehub.utoronto.ca/pediatrics/throat-swab/,Pediatrics ENT
+53,Cases,null,https://emergencymedicinecases.com/topics/pediatrics/,Pediatrics Emergency Medicine
+54,neonatal hypoglycemia notes,null,https://www.pedscases.com/neonatal-hypoglycemia-0,Pediatrics Endocrine and Metabolic
+55,video: large for gestational age / infants of diabetic mothers,null,https://www.pedscases.com/lgaidm-0,Pediatrics Endocrine and Metabolic
+56,video: part 1 normal puberty,null,https://www.pedscases.com/puberty-and-pubertal-disorders-%E2%80%93-part-1-normal-puberty,Pediatrics Endocrine and Metabolic
+57,video: part 2 precocious puberty,null,https://www.pedscases.com/puberty-and-pubertal-disorders-part-2-precocious-puberty,Pediatrics Endocrine and Metabolic
+58,video: part 3 delayed puberty,null,https://www.pedscases.com/puberty-and-pubertal-disorders-%E2%80%93-part-3-delayed-puberty,Pediatrics Endocrine and Metabolic
+59,Periodic Eye Exam 0-5 year old Canadian Guidelines 2019,null,https://www.cos-sco.ca/wp-content/uploads/2020/08/54-6_EyeExamGuidelines_EN.pdf,Pediatrics Eye
+60,"Vision screening for infants, children & youth 2018",null,https://www.cps.ca/en/documents/position/children-vision-screening,Pediatrics Eye
+61,video: glaucoma,null,https://www.pedscases.com/approach-childhood-glaucoma,Pediatrics Eye
+62,video: pediatric eye exam in primary care,null,https://www.pedscases.com/pediatric-eye-exam-primary-care,Pediatrics Eye
+63,video: approach to leukocoria,null,https://www.pedscases.com/approach-leukocoria,Pediatrics Eye
+64,abdominal pain,null,http://thehub.utoronto.ca/pediatrics/abdominal-pain/,Pediatrics GastroIntetinal or Abdominal
+65,acute abdominal pain notes,null,https://www.pedscases.com/acute-abdominal-pain-0,Pediatrics GastroIntetinal or Abdominal
+66,Nonalcoholic fatty liver disease (NAFLD),null,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5413933/pdf/nihms831974.pdf,Pediatrics GastroIntetinal or Abdominal
+67,video: fragile X syndrome,null,https://www.pedscases.com/fragile-x-syndrome,Pediatrics Genetic
+68,video: tetralogy of fallot,null,https://www.pedscases.com/tetralogy-fallot,Pediatrics Genetic
+69,urinary tract infection notes,null,https://www.pedscases.com/urinary-tract-infection-uti,Pediatrics Genitourinary
+70,urinary tract infection,null,http://thehub.utoronto.ca/pediatrics/urinary-tract-infection/,Pediatrics Genitourinary
+71,contraception care in youth notes,null,https://www.pedscases.com/contraception-care-youth,Pediatrics Gynecologic
+72,anemia,null,http://thehub.utoronto.ca/pediatrics/anemia/,Pediatrics Hematologic
+73,cervical lymphadenopathy notes,null,https://www.pedscases.com/cervical-lymphadenopathy,Pediatrics Hematologic
+74,sickle cell disease acute complications notes,null,https://www.pedscases.com/sickle-cell-disease-acute-complications,Pediatrics Hematologic
+75,sickle cell disease overview notes,null,https://www.pedscases.com/sickle-cell-disease-overview,Pediatrics Hematologic
+76,Adolescent History,null,http://thehub.utoronto.ca/pediatrics/adolescent-focused-history/,Adolescent History
+77,"Hypertension Canada’s 2020 Comprehensive Guidelines for the Prevention, Diagnosis, Risk Assessment, and Treatment of Hypertension in Adults and Children 2020",null,https://www.onlinecjc.ca/article/S0828-282X(20)30191-4/fulltext,Pediatrics Hypertention
+78,Immunization schedules,null,https://www.canada.ca/en/public-health/services/provincial-territorial-immunization-information/provincial-territorial-routine-vaccination-programs-infants-children.html,Pediatrics Immunization
+79,video: part 1 past,null,https://www.pedscases.com/indigenous-child-health-canada-part-i-past,Pediatrics Indigenous Health in Canada
+80,video: part 2 present,null,https://www.pedscases.com/indigenous-child-health-canada-part-ii-present,Pediatrics Indigenous Health in Canada
+81,video: part 3 future,null,https://www.pedscases.com/indigenous-child-health-canada-%E2%80%93-part-iii-future,Pediatrics Indigenous Health in Canada
+82,neonatal sepsis notes,null,https://www.pedscases.com/neonatal-sepsis,Pediatrics Infection
+83,febrile neutropenia notes,null,https://www.pedscases.com/febrile-neutropenia-0,Pediatrics Infection
+84,fever,null,http://thehub.utoronto.ca/pediatrics/fever/,Pediatrics Infection
+85,Jaundice neonatal,null,http://thehub.utoronto.ca/pediatrics/neonatal-jaundice/,Pediatrics Jaundice Neonatal
+86,Anxiety Canada Resources,null,https://www.anxietycanada.com/free-downloadable-pdf-resources/,Pediatrics Mental Health
+87,HEADS-ED,null,https://www.heads-ed.com/download/134_2y10aCGaOR4syRUEbZ9RKjUg9uGpsr,Pediatrics Mental Health
+88,HEADS assessment (video),null,https://www.youtube.com/watch?v=wtDKYa_8JeA,Pediatrics Mental Health
+89,Mental health screening tools and rating scales,null,https://www.cps.ca/en/mental-health-screening-tools,Pediatrics Mental Health
+90,Mindshift App Free,null,https://www.anxietycanada.com/resources/mindshift-cbt/,Pediatrics Mental Health
+91,Treatment algorithm anxiety or depression,null,https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/bc-guidelines/anxiety-and-depression-in-youth#algorithm,Pediatrics Mental Health
+92,Youth mental health: anxiety and depression 2017,null,http://thehub.utoronto.ca/family/wp-content/uploads/2019/02/Youth-Mental-Health-Anxiety-and-Depression.pdf,Pediatrics Mental Health
+93,meningitis notes,null,https://www.pedscases.com/meningitis-0,Pediatrics Neurological
+94,febrile seizures notes,null,https://www.pedscases.com/febrile-seizures-0,Pediatrics Neurological
+95,pediatric epilepsy notes,null,https://www.pedscases.com/pediatric-epilepsy,Pediatrics Neurological
+96,status epilepticus notes,null,https://www.pedscases.com/status-epilepticus,Pediatrics Neurological
+97,brain tumor notes,null,https://www.pedscases.com/brain-tumors,Pediatrics Neurological
+98,pediatric migraine notes,null,https://www.pedscases.com/pediatric-migrane,Pediatrics Neurological
+99,video: neurocutaneous disorders,null,https://www.pedscases.com/neurocutaneous-disorders,Pediatrics Neurological
+100,seizures,null,http://thehub.utoronto.ca/pediatrics/seizures/,Pediatrics Neurological
+101,Obesity 2015,null,https://canadiantaskforce.ca/guidelines/published-guidelines/obesity-in-children/,Pediatrics Obesity
+102,pain and distress management during brief medical procedures notes,null,https://www.pedscases.com/cps-statement-note-pain-and-distress-management-brief-medical-procedures,Pediatrics Pain
+103,Uncomplicated pneumonia in children & youth 2018,null,https://www.cps.ca/documents/position/pneumonia-management-children-youth,Pediatrics Pneumonia
+104,left torticollis (right side flattening),null,https://www.cheo.on.ca/en/resources-and-support/resources/P5559E.pdf,Pediatrics Plagiocephaly
+105,right torticollis (left side flattening),null,https://www.cheo.on.ca/en/resources-and-support/resources/P5611E.pdf,Pediatrics Plagiocephaly
+106,Assessment of puberty,null,http://thehub.utoronto.ca/pediatrics/assessment-of-puberty/,Pediatrics Puberty
+107,pediatric anxiety notes,null,https://www.pedscases.com/pediatric-anxiety-0,Pediatrics Psychological
+108,Anxiety and Depression in Children & Youth Diagnosis & Treatment,null,https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/bc-guidelines/anxiety-and-depression-in-youth,Pediatrics Psychological
+109,Recognition and Management,null,https://emergencymedicinecases.com/pediatric-physical-abuse/,Pediatrics Physical Abuse
+110,video: intrauterine growth restriction,null,https://www.pedscases.com/intrauterine-growth-restriction,Pediatrics Prenatal
+111,video: abdominal x-rays,null,https://www.pedscases.com/approach-pediatric-abdominal-x-rays-video,Pediatrics Radiology
+112,video: chest x-ray,null,https://www.pedscases.com/approach-pediatric-chest-x-rays-video,Pediatrics Radiology
+113,Peds Clinic Triage Guidelines (2021),null,https://webnp.info/wp-content/uploads/pediatrics/PedsClinic.triage.pdf,Pediatrics Referral-Pediatrics PEI
+114,asthma acute exacerbation notes,null,https://www.pedscases.com/acute-asthma-exacerbation,Pediatrics Respiratory
+115,bronchiolitis approach notes,null,https://www.pedscases.com/approach-bronchiolitis-0,Pediatrics Respiratory
+116,community acquired pneumonia notes,null,https://www.pedscases.com/community-acquired-pneumonia-cap,Pediatrics Respiratory
+117,croup acute management notes,null,https://www.pedscases.com/acute-management-croup,Pediatrics Respiratory
+118,cystic fibrosis notes,null,https://www.pedscases.com/cystic-fibrosis,Pediatrics Respiratory
+119,respiratory illness,null,http://thehub.utoronto.ca/pediatrics/respiratory-illness/,Pediatrics Respiratory
+120,respiratory medications reference list,null,http://hcp.lunghealth.ca/wp-content/uploads/2021/02/lhf_respmed_rgb_feb2021.pdf,Pediatrics Respiratory
+121,derm Net,null,https://www.dermnetnz.org/,Pediatrics Skin
+122,diagnostic tool,null,https://www.dermnetnz.org/dermdiag/,Pediatrics Skin
+123,rash,null,http://thehub.utoronto.ca/pediatrics/rash/,Pediatrics Skin
+124,skin and soft tissue infections notes,null,https://www.pedscases.com/skin-and-soft-tissue-infections,Pediatrics Skin
+125,varicella notes,null,https://www.pedscases.com/varicella-0,Pediatrics Skin
+126,video: viral rashes,null,https://www.pedscases.com/viral-rashes-children-video,Pediatrics Skin
+127,video: acne part 1,null,https://www.pedscases.com/approach-acne-part-1,Pediatrics Skin
+128,video: acne part 2,null,https://www.pedscases.com/approach-acne-part-2,Pediatrics Skin
+129,video: varicella,null,https://www.pedscases.com/varicella,Pediatrics Skin
+130,video: diaper dermatitis,null,https://www.pedscases.com/diaper-dermatitis,Pediatrics Skin
+131,video: sun protection,null,https://www.pedscases.com/myths-and-facts-about-sun-protection-pediatric-population,Pediatrics Skin
+132,video: approach to birthmarks,null,https://www.pedscases.com/approach-birthmarks,Pediatrics Skin
+133,video: psoriasis,null,https://www.pedscases.com/approach-pediatric-psoriasis-0,Pediatrics Skin
+134,Translating Emergency Knowledge for Kids,null,https://trekk.ca/browse_resources,Pediatrics TREKK
+135,urinary tract infections myths and misperceptions,null,https://emergencymedicinecases.com/pediatric-uti-myths-and-misperceptions/,Pediatrics Urinary Tract
+136,vital signs reference chart,null,https://www.pedscases.com/pediatric-vital-signs-reference-chart,Pediatrics Vital Signs
+137,Abdominal pain,null,http://thehub.utoronto.ca/family/abdominal-pain/,null
+138,Abortion – medication training,null,https://web.cvent.com/event/1048f179-8e60-4bbb-9881-1e7b211fffd3/summary,null
+139,Addiction toolkit,null,https://www.porticonetwork.ca/tools/toolkits/pcat,null
+140,Addiction guide patient & family,null,https://www.camh.ca/-/media/files/guides-and-publications/addiction-guide-en.pdf?la=en&hash=F1BFB1ED194D54A9FCF892116BFE745818169A56,null
+141,Adolescent care 18-25 years,null,http://thehub.utoronto.ca/family/adolescent/,null
+142,Alcohol use disorder (AUD) Tool,null,https://cep.health/media/uploaded/20191003-CEP_AUD-rev.12_UPDATED.pdf,null
+143,Alcohol drinking guidelines – low risk (2018) ,null,https://www.ccsa.ca/sites/default/files/2020-07/2012-Canada-Low-Risk-Alcohol-Drinking-Guidelines-Brochure-en_0.pdf,null
+144,Alcohol screening questionnaire (CAGE),null,https://nationalpaincentre.mcmaster.ca/documents/cage_questionnaire.pdf,null
+145,Alcohol App – Saying when,null,https://www.camh.ca/en/camh-news-and-stories/introducing-the-saying-when-app,null
+146,Allergic reactions,null,http://thehub.utoronto.ca/family/allergic-reactions/,null
+147,Anemia evaluation (2021) ,null,https://bestpractice.bmj.com/topics/en-us/93/pdf/93/Evaluation%20of%20anemia.pdf,null
+148,Ankle – Ottawa ankle rule calculator,null,https://www.mdcalc.com/ottawa-ankle-rule,null
+149,Antibiogram Health PEI (2021),null,https://src.healthpei.ca/sites/src.healthpei.ca/files/Laboratory%20Services/antibiogram.pdf,null
+150,Antibiotics and common infections Rx Files (2016),null,https://www.rxfiles.ca/rxfiles/uploads/documents/abx-newsletter-2016-complete.pdf,null
+151,Antiobiotic resistance patterns – Health PEI,null,https://src.healthpei.ca/microbiology,null
+152,Antibiotics for adults (2018),null,https://cdn.dal.ca/content/dam/dalhousie/pdf/faculty/medicine/departments/core-units/cpd/academic-detailing/Antibiotics-AdultsPatients.pdf,null
+153,Antiplatelet therapy (2018),null,https://ccs.ca/guidelines-and-position-statement-library/,null
+154,Antiplatelet therapy pocket guide (2018),null,https://ccs.ca/app/uploads/2020/11/APT_Gui_2018_PG_EN_web.pdf,null
+155,Anxiety,null,http://thehub.utoronto.ca/family/anxiety-3/,null
+156,Anxiety & Stress Management App during Covid-19,null,https://www.camh.ca/en/health-info/mental-health-and-covid-19/mh-covid-19-app,null
+157,Aortic abdominal aneurysm (2017),null,https://www.camh.ca/en/health-info/mental-health-and-covid-19/mh-covid-19-app,null
+158,Arrhythmia (2020),null,https://ccs.ca/guidelines-and-position-statement-library/,null
+159,Asthma,null,http://thehub.utoronto.ca/family/asthma/,null
+160,Asthma – very mild to mild guideline 2021,null,https://cts-sct.ca/wp-content/uploads/2021/02/FINAL-CTS_Very-Mild-and-Mild-Asthma-CPG.pdf,null
+161,Asthma Management Guideline Library – Canadian Thoracic Society,null,https://cts-sct.ca/guideline-library/,null
+162,Atrial fibrillation 2020,null,https://ccs.ca/guidelines-and-position-statement-library/,null
+163,Atrial fibrillation pocket guide,null,https://ccs.ca/app/uploads/2020/11/AF_Gui_2018_PG_EN_web.pdf,null
+164,Atrial fibrillation anticoagulation dosing,null,https://thrombosiscanada.ca/tools/?calc=antithromboticAlgorithm,null
+165,Bacteriuria (asymptomatic) in pregnancy (2018),null,https://canadiantaskforce.ca/guidelines/published-guidelines/asymptomatic-bacteriuria/,null
+166,Bleeding Assessment Tool,null,https://bleedingscore.certe.nl/,null
+167,Bleeding Clinical Evaluation 2016,null,https://www.aafp.org/afp/2016/0215/p279.html,null
+168,Breast cancer (2018),null,https://canadiantaskforce.ca/guidelines/published-guidelines/breast-cancer-update/,null
+169,Breast concerns,null,http://thehub.utoronto.ca/family/breast-concerns/,null
+170,Bladder overactive pocket guide (2017),null,https://www.cua.org/index.php/system/files/Guidelines/OAB%20pocket%20guide.pdf,null
+171,Calculator – MD Calc,null,https://www.mdcalc.com/,null
+172,Cardiometabolic Risk Calculator,null,https://cardiometabolicage.com/,null
+173,Cardiovascular disease,null,http://thehub.utoronto.ca/family/coronary-artery-disease-2/,null
+174,Cancer symptom management guidelines (2020),null,https://ktcanada.ohri.ca/costars/COSTaRS_Practice_Guides_ENGLISH_Jan2020.pdf,null
+175,Cancer trials Canadian,null,http://www.canadiancancertrials.ca/,null
+176,Cerebrovascular disease,null,http://thehub.utoronto.ca/family/cerebrovascular-disease/,null
+177,Cervical cancer (2013),null,https://canadiantaskforce.ca/guidelines/published-guidelines/cervical-cancer/,null
+178,Chest pain,null,http://thehub.utoronto.ca/family/chest-pain/,null
+179,Choosing wisely,null,http://thehub.utoronto.ca/family/choosing-wisely/,null
+180,Clinical Cards – Family Medicine ,null,https://learnfm.ucalgary.ca/wp-content/uploads/2020/10/LearnFM-Clinical-Card-Book-2020.pdf,null
+181,Cognition impaired,null,http://thehub.utoronto.ca/family/impaired-cognitive-function/,null
+182,Cognitive impairment (2015),null,https://canadiantaskforce.ca/guidelines/published-guidelines/cognitive-impairment/,null
+183,Cognitive screening toolkit,null,https://www.heartandstroke.ca/-/media/pdf-files/canada/clinical-update/allen-huang-cognitive-screening-toolkit.ashx?la=en&hash=631B35521724C28268D0C2130D07A401E33CDBB0,null
+184,Colorectal cancer (2016),null,https://canadiantaskforce.ca/guidelines/published-guidelines/colorectal-cancer/,null
+185,Congestive heart failure,null,http://thehub.utoronto.ca/family/congestive-heart-failure/,null
+186,Constipation,null,http://thehub.utoronto.ca/family/constipation/,null
+187,Coronary Artery Disease – Acute Coronary Syndrome (2019),null,https://ccs.ca/guidelines-and-position-statement-library/,null
+188,Cough classification 2018,null,https://journal.chestnet.org/article/S0012-3692(17)32918-5/fulltext,null
+189,Cough and dyspnea,null,http://thehub.utoronto.ca/family/cough-and-dyspnea/,null
+190,COPD Management Guideline Library – Canadian Thoracic Society,null,https://cts-sct.ca/guideline-library/,null
+191,COPD (2018),null,https://cts-sct.ca/wp-content/uploads/2018/07/5158_THOR-COPD-sj-11.875x9_0318_en-web.pdf,null
+192,COPD,null,http://thehub.utoronto.ca/family/chronic-obstructive-pulmonary-disease/,null
+193,Deep Vein Thrombosis – Risk Score Well’s Criteria,null,https://thrombosiscanada.ca/tools/?calc=wellsDVT,null
+194,Deprescribing,null,https://www.deprescribingnetwork.ca/,null
+195,Depression,null,http://thehub.utoronto.ca/family/depression/,null
+196,Depression in adults (2013),null,https://canadiantaskforce.ca/guidelines/published-guidelines/depression/,null
+197,Depression screening (2013),null,https://canadiantaskforce.ca/wp-content/uploads/2016/05/2013-depression-clinician-algorithm-and-faq-en.pdf,null
+198,Dermatology,null,https://www.dermnetnz.org/,null
+199,Dermatology diagnostic tool,null,https://www.dermnetnz.org/dermdiag/,null
+200,Developmental delay (2016),null,https://canadiantaskforce.ca/guidelines/published-guidelines/developmental-delay/,null
+201,Diabetes Canada clinical decision support tools,null,http://clinical%20decision%20support%20tools/,null
+202,Diabetes Canada type 2 quick reference guide (2020) ,null,http://guidelines.diabetes.ca/CDACPG/media/documents/CPG/CPG_Quick_Reference_Guide_PRINT_EN_2020.pdf,null
+203,Diabetes risk tool,null,https://thrombosiscanada.ca/guides/,null
+204,Diabetes T2 Clinical Practice Guideline (2018),null,http://guidelines.diabetes.ca/docs/CPG-quick-reference-guide-web-EN.pdf#page=1,null
+205,Diabetes T2 Clinical Card (2014),null,http://thehub.utoronto.ca/family/wp-content/uploads/2016/12/Type-2-Diabetes-Clinical-Card.pdf,null
+206,Diabetes Screening T1 & T2 Adults (2018),null,https://guidelines.diabetes.ca/docs/cpg/Ch4-Screening-for-Diabetes-in-Adults.pdf,null
+207,Diabetes type 2 pharmacologic management (2020),null,https://guidelines.diabetes.ca/CDACPG/media/documents/2020/DC-Guidelines-2020-Pharm2-Update.pdf,null
+208,Diabetes Clinical Practice Guideline (2018),null,https://www.cfp.ca/content/cfp/65/1/14.full.pdf,null
+209,Diabetes Type 2 Insulin Management (2011),null,https://www.aafp.org/afp/2011/0715/afp20110715p183.pdf,null
+210,Diabetes sexual dysfunction in men (2018),null,https://guidelines.diabetes.ca/docs/cpg/Ch33-Sexual-Dysfunction-and-Hypogonadism-in-Men-with-Diabetes.pdf,null
+211,Diarrhea,null,http://thehub.utoronto.ca/family/diarrhea/,null
+212,Diagnostic imaging referral guidelines,null,https://car.ca/patient-care/referral-guidelines/,null
+213,Dizziness,null,http://thehub.utoronto.ca/family/dizziness/,null
+214,DSM-5 overview (video),null,https://www.khanacademy.org/test-prep/mcat/behavior/psychological-disorders/v/categories-of-mental-disorders,null
+215,DSM-5 fact sheets (recent changes),null,https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/dsm-5-fact-sheets,null
+216,Dyspepsia,null,http://thehub.utoronto.ca/family/dyspepsia/,null
+217,Dyslipidemia Pocket Guide (2016),null,https://ccs.ca/app/uploads/2020/11/Lipids_Gui_2016_EN.pdf,null
+218,Dyslipidemia Lipid Guideline Simplified (2015),null,https://www.cfp.ca/content/61/10/857,null
+219,Dyslipidemia Management (2021),null,https://www.onlinecjc.ca/article/S0828-282X(21)00165-3/fulltext,null
+220,Dyslipedemia pocket guide (2016),null,https://ccs.ca/app/uploads/2020/11/Lipids_Gui_2016_EN.pdf,null
+221,Ear symptoms,null,http://thehub.utoronto.ca/family/ear-symptoms/,null
+222,Elderly Care,null,http://thehub.utoronto.ca/family/elderley-care/,null
+223,Emergency medicine cases,null,https://emergencymedicinecases.com/,null
+224,Erectile dysfunction (2015),null,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4336024/pdf/cuaj-1-2-23.pdf,null
+225,Erythrocytosis,null,https://www.cmaj.ca/content/192/32/E913,null
+226,Esophageal adenocarcinoma (2020),null,https://canadiantaskforce.ca/guidelines/published-guidelines/esophageal-adenocarcinoma/,null
+227,Eye redness,null,http://thehub.utoronto.ca/family/red-eye/,null
+228,Falls seniors,null,https://www.canada.ca/en/public-health/services/health-promotion/aging-seniors/publications/publications-general-public/seniors-falls-canada-second-report.html,null
+229,Fall prevention handout,null,https://www.canada.ca/content/dam/phac-aspc/migration/phac-aspc/seniors-aines/alt-formats/pdf/publications/public/injury-blessure/prevent-eviter/prevent-eviter-e.pdf,null
+230,Family planning,null,http://thehub.utoronto.ca/family/family-planning-contraception/,null
+231,Fatigue,null,http://thehub.utoronto.ca/family/fatigue-2/,null
+232,Fever,null,http://thehub.utoronto.ca/family/fever/,null
+233,Fever unknown origin workup 2014,null,https://www.aafp.org/afp/2014/0715/afp20140715p91.pdf,null
+234,Fibromyalgia,null,https://rheum.ca/resources/publications/canadian-fibromyalgia-guidelines/,null
+235,Framingham Risk Score worksheet color,null,https://ccs.ca/app/uploads/2020/12/FRS_eng_2017_fnl1.pdf,null
+236,Gender affirming care guidelines,null,https://www.rainbowhealthontario.ca/product/4th-edition-sherbournes-guidelines-for-gender-affirming-primary-care-with-trans-and-non-binary-patients/,null
+237,Genital concerns and STIs,null,http://thehub.utoronto.ca/family/genital-concerns-and-stis/,null
+238,Geriatric Assessment,null,https://hign.org/consultgeri/try-this,null
+239,Global Health,null,http://thehub.utoronto.ca/family/global-health/,null
+240,Headache,null,http://thehub.utoronto.ca/family/headache-2/,null
+241,Headache fact sheets ,null,https://headaches.org/category/headache-fact-sheets/,null
+242,Headache infographics (patients),null,https://americanheadachesociety.org/resources/infographics/,null
+243,Heart Failure,null,https://ccs.ca/guidelines-and-position-statement-library/,null
+244,Heart Failure pocket guide (2017),null,https://ccs.ca/app/uploads/2020/11/HF_Gui_2017_PG_EN_web.pdf,null
+245,Heart Failure Medication Initiation and Titration (2018),null,https://ccs.ca/app/uploads/2020/12/Complete_HF_algorithms_Dec_2018.pdf,null
+246,Heart Failure Referral Form,null,https://ccs.ca/app/uploads/2020/12/HF_Pathway_March2015.pdf,null
+247,Hepatitis C (2017),null,https://canadiantaskforce.ca/guidelines/published-guidelines/hepatitis-c/,null
+248,Hypercholesterolemia familial (2018) ,null,https://www.onlinecjc.ca/article/S0828-282X(18)31171-1/abstract,null
+249,Hyperlipidemia CardioRisk Calculator,null,https://www.circl.ubc.ca/cardiorisk-calculator.html,null
+250,Hyperlipidemia,null,http://thehub.utoronto.ca/family/hyperlipidemia/,null
+251,Hypertension,null,http://thehub.utoronto.ca/family/hypertension/,null
+252,Hypertension Canada Comprehensive Guidelines 2020,null,https://www.onlinecjc.ca/article/S0828-282X(20)30191-4/fulltext,null
+253,Immunization adults,null,https://www.canada.ca/en/public-health/services/vaccination-adults.html#a2,null
+254,Infections common,null,http://thehub.utoronto.ca/family/common-infections/,null
+255,Insulin prescription tool,null,http://guidelines.diabetes.ca/reduce-complications/insulin-prescription-tool,null
+256,Kidney disease chronic,null,http://thehub.utoronto.ca/family/chronic-kidney-disease/,null
+257,Knee – Ottawa knee rule calculator,null,https://www.mdcalc.com/ottawa-knee-rule,null
+258,Lab values abnormal,null,https://mcc.ca/objectives/normal-values/,null
+259,LGBQTIQ2S,null,http://thehub.utoronto.ca/family/lgbtiq2s/,null
+260,Lung cancer (2016),null,https://canadiantaskforce.ca/guidelines/published-guidelines/lung-cancer/,null
+261,Lymphadenopathy (2016),null,https://www.aafp.org/afp/2016/1201/afp20161201p896.pdf,null
+262,Menopausal symptoms,null,http://thehub.utoronto.ca/family/menopausal-symptoms/,null
+263,Menopause tool (2017),null,https://www.cfp.ca/content/cfp/63/4/295.full.pdf,null
+264,Menstrual symptoms,null,http://thehub.utoronto.ca/family/menstrual-issues/,null
+265,Motivational interviewing,null,http://thehub.utoronto.ca/family/motivational-interviewing/,null
+266,Musculoskeletal Acute Pain (2021),null,https://cdn.dal.ca/content/dam/dalhousie/pdf/faculty/medicine/departments/core-units/cpd/academic-detailing/AcutePainConditions-OpioidPrescribingLaminate.pdf,null
+267,NSAID risks (2021),null,https://cdn.dal.ca/content/dam/dalhousie/pdf/faculty/medicine/departments/core-units/cpd/academic-detailing/NSAIDRisksLaminate.pdf,null
+268,Obesity,null,http://thehub.utoronto.ca/family/obesity/,null
+269,Obesity in adults (2015),null,https://canadiantaskforce.ca/guidelines/published-guidelines/obesity-in-adults/,null
+270,Opioid risk tool,null,https://www.drugabuse.gov/sites/default/files/opioidrisktool.pdf,null
+271,Opioid use disorders guideline (2018),null,https://www.cmaj.ca/content/cmaj/190/9/E247.full.pdf,null
+272,Osteoperosis,null,http://thehub.utoronto.ca/family/osteoporosis/,null
+273,Osteoperosis (2010),null,https://www.cmaj.ca/content/cmaj/182/17/1864.full.pdf,null
+274,Osteoperosis fracture risk tool,null,https://www.sheffield.ac.uk/FRAX/tool.aspx?country=19,null
+275,Pain – acute drug tables (2021),null,https://cdn.dal.ca/content/dam/dalhousie/pdf/faculty/medicine/departments/core-units/cpd/academic-detailing/AcutePainDrugTables.pdf,null
+276,Pain – brief pain inventory (BPI),null,https://www.painbc.ca/sites/default/files/events/materials/BriefPainInventory-ShortForm.pdf,null
+277,"Pain – chronic, non-cancer opioid Canadian guidelines (2017)",null,https://nationalpaincentre.mcmaster.ca/documents/Opioid%20GL%20for%20CMAJ_01may2017.pdf,null
+278,Pain chronic non-cancer non-opiods (2018),null,https://cdn.dal.ca/content/dam/dalhousie/pdf/faculty/medicine/departments/core-units/cpd/academic-detailing/Commonly%20Used%20Non-opioids%20for%20CNCP%20Final%20May%209%202018.pdf,null
+279,Pain chronic,null,http://thehub.utoronto.ca/family/chronic-pain/,null
+280,Pain back and neck,null,http://thehub.utoronto.ca/family/back-pain/,null
+281,Pain joint & limb,null,http://thehub.utoronto.ca/family/jointlimb-pain/,null
+282,Palliative care,null,http://thehub.utoronto.ca/family/palliative-care-2/,null
+283,Pelvic exam (2016),null,https://canadiantaskforce.ca/guidelines/published-guidelines/pelvic-exam/,null
+284,Physical activity toolkit for primary care providers (2022) CSEP,null,https://csepguidelines.ca/whole-day-matters-toolkit-for-primary-care/,null
+285,Physical exam skills U of T,null,http://thehub.utoronto.ca/family/physical-exam-skills/,null
+286,Physical exam video – Stanford Medicine,null,https://stanfordmedicine25.stanford.edu/videos.html,null
+287,Procedural skills,null,http://thehub.utoronto.ca/family/procedural-skills-2/,null
+288,Pregnancy and prenatal care,null,http://thehub.utoronto.ca/family/pregnancy-and-prenatal-care/,null
+289,Preventive care checklist form female (pdf fillable),null,https://www.cfp.ca/content/cfp/suppl/2012/01/18/58.1.43.DC1/Women_Eng.pdf,null
+290,Preventive care checklist form male (pdf fillable),null,https://portal.cfpc.ca/ResourcesDocs/uploadedFiles/Health_Policy/PreventiveCareChecklistMaleEnglish2019_fillablepdf.pdf,null
+291,Preventive Health,null,http://thehub.utoronto.ca/family/adult-preventive-health-care-2/,null
+292,Pulmonary Embolus Risk Score Well’s Criteria,null,https://thrombosiscanada.ca/tools/?calc=wellsPE,null
+293,e-Prescribing,null,https://elearnhcp.ca/,null
+294,Prostate cancer (2014),null,https://canadiantaskforce.ca/guidelines/published-guidelines/prostate-cancer/,null
+295,Rectal concerns,null,http://thehub.utoronto.ca/family/rectal-concerns/,null
+296,Respiratory Illness Guidelines,null,https://cts-sct.ca/guideline-library/,null
+297,Respiratory medications reference list,null,http://hcp.lunghealth.ca/wp-content/uploads/2021/02/lhf_respmed_rgb_feb2021.pdf,null
+298,Rheumatology guidelines,null,https://rheum.ca/resources/publications/,null
+299,Sexually transmitted infections Canadian guidelines,null,https://www.canada.ca/en/public-health/services/infectious-diseases/sexual-health-sexually-transmitted-infections/canadian-guidelines/sexually-transmitted-infections.html,null
+300,"Sinusitis – acute, bacterial 2014",null,https://www.cfp.ca/content/cfp/60/3/227.full.pdf,null
+301,Skin concerns,null,http://thehub.utoronto.ca/family/skin-concerns/,null
+302,Sleep concerns,null,http://thehub.utoronto.ca/family/sleep-concerns/,null
+303,Substance Abuse & Smoking Cessation,null,http://thehub.utoronto.ca/family/substance-abuse-and-smoking-cessation/,null
+304,Smoking Cessation 5 As Approach,null,https://www.pharmacists.ca/cpha-ca/assets/File/membership/The%205As%20Approach.pdf,null
+305,Syncope (2020),null,https://ccs.ca/guidelines-and-position-statement-library/,null
+306,Thrombosis clinical guides,null,https://thrombosiscanada.ca/clinicalguides/,null
+307,Thrombosis tools,null,https://thrombosiscanada.ca/tools/?calc=vivomap262,null
+308,Thyroid hypo and hyperthyroidism (2011),null,http://thehub.utoronto.ca/family/wp-content/uploads/2016/12/Thyroid-Disease-Hypo-and-Hyperthyroidism.pdf,null
+309,Thyroid nodules (2013) ,null,https://www.aafp.org/afp/2013/0801/afp20130801p193.pdf,null
+310,Thyroid primary dysfunction guideline (2014),null,https://actt.albertadoctors.org/CPGs/Lists/CPGDocumentList/thyroid-guideline.pdf,null
+311,Thyroid dysfunction (asymptomatic) (2019),null,https://canadiantaskforce.ca/guidelines/published-guidelines/asymptomatic-thyroid-dysfunction/,null
+312,Tobacco smoking in children and adolescents (2017),null,https://canadiantaskforce.ca/guidelines/published-guidelines/tobacco-smoking-in-children-and-adolescents/,null
+313,Urogenital concerns,null,http://thehub.utoronto.ca/family/urogenital-concerns/,null
+314,Urologic guidelines,null,https://www.cua.org/guidelines,null
+315,Violence family,null,http://thehub.utoronto.ca/family/family-violence/,null
+316,Virtual care,null,http://thehub.utoronto.ca/family/virtual-care/,null
+317,Vision impaired (2018),null,https://canadiantaskforce.ca/guidelines/published-guidelines/impaired-vision/,null
+318,,,,
+319,,,,
+320,,,,
+321,,,,
+322,,,,
+323,,,,
+324,,,,
+325,,,,
+326,,,,
+327,,,,
+328,,,,
+329,,,,
+330,,,,
+331,,,,
+332,,,,
+333,,,,
+334,,,,
+335,,,,
+336,,,,
+337,,,,
+338,,,,
+339,,,,
+340,,,,
+341,,,,

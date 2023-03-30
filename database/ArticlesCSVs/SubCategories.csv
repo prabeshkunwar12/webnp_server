@@ -1,0 +1,65 @@
+﻿id,name,categories_id,attribution
+1,Abdominal Pain ,1,"Image by upklyak on Freepik"
+2,Allergic Reactions ,1,"Image by vectorjuice on Freepik"
+3,Back and Neck Pain,1,"Image by kjpargeter on Freepik"
+4,Breast Concerns ,1,"Image by felicities on Freepik"
+5,Chest Pain,1,"Image by rawpixel.com on Freepik"
+6,Chronic Pain,1,"Image by brgfx on Freepik"
+7,Common Infections,1,"Image by brgfx on Freepik"
+8,Constipation,1,"Image by brgfx on Freepik"
+9,Cough and Dyspnea,1,null
+10,Diarrhea,1,null
+11,Dizziness ,1,null
+12,Dyspepsia,1,null
+13,Ear Symptoms,1,null
+14,Fatugue,1,null
+15,Fever,1,null
+16,Genital Concerns and STIs,1,null
+17,Headache,1,null
+18,Joint or Limb Pain,1,null
+19,Menopausal Symptoms,1,null
+20,Menstrual Issues,1,null
+21,Rectal Concerns,1,null
+22,Red Eye,1,null
+23,Skin Concerns,1,null
+24,Sleep Concerns,1,null
+25,Urogenital Concerns,1,null
+26,Asthma ,2,null
+27,Cardiovascular Disease,2,null
+28,Cerebrovascular Disease,2,null
+29,Chronoc kedney Disease,2,null
+30,Congestive Heart Failure,2,null
+31,COPD,2,null
+32,Diabetes Mellitus,2,null
+33,Hyperlipidemia,2,null
+34,Hypertension,2,null
+35,Obesity,2,null
+36,Osteoporosis,2,null
+37,Thyroid Disease,2,null
+38,Anxiety,3,null
+39,Depression,3,null
+40,Family Violence,3,null
+41,Impaired Cognition,3,null
+42,Substance Abuse ,3,null
+43,Child Abuse,3,null
+44,Adolescent ,4,null
+45,Adult Preventive Health ,4,null
+46,Choosing Wisely,4,null
+47,Elederly Care,4,null
+48,Family Planning ,4,null
+49,Global Health ,4,null
+50,LGBTIQ2S,4,null
+51,Palliative Care,4,null
+52,Pregnancy and prenatal Care,4,null
+53,Child Care,4,null
+54,Growth Charts,4,null
+55,Virtual care,5,null
+56,Motivational Interviewing ,5,null
+57,Physical Exam Skills,5,null
+58,Preocedural Skills,5,null
+59,Respiratory Disease,2,null
+60,Motor Disorder,2,null
+61,Gastrointestinal Disorder,2,null
+62,Nutrition,4,null
+63,Subspecialty Care,4,null
+64,Glaucoma,2,null
