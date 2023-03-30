@@ -165,7 +165,6 @@
                                         <img class="card-img-top" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
                                         <span class="card-body">
                                             <h4 class="title mt-4">'.$subCategories[$j-1]->name.'</h4>
-                                            <p class="xs-font">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.</p>
                                         </span>
                                     </a>
                                 </div>
@@ -177,7 +176,6 @@
                                             <img class="card-img-top" src="imgs/stat.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
                                             <span class="card-body">
                                                 <h4 class="title mt-4">'.$subCategories[$j]->name.'</h4>
-                                                <p class="xs-font">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.</p>
                                             </span>
                                         </a>
                                     </div>
@@ -189,7 +187,6 @@
                                             <img class="card-img-top" src="imgs/track.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
                                             <span class="card-body">
                                                 <h4 class="title mt-4">'.$subCategories[$j+1]->name.'</h4>
-                                                <p class="xs-font">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.</p>
                                             </span>
                                         </a>
                                     </div>
@@ -203,6 +200,8 @@
                         </div>
                     </section> 
                 ';
+
+                
             }
             
              
