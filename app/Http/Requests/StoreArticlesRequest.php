@@ -25,7 +25,7 @@ class StoreArticlesRequest extends FormRequest
     {
         return [
             'name'=>'required',
-            'url'=>'required_without:location|url'
+            'url'=>'required_without:location|url',
             'location'=>'required_without:url'
         ];
     }

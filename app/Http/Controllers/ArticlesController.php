@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Articles;
+use App\Models\Categories;
+use App\Models\SubCategories;
 use App\Http\Requests\StoreArticlesRequest;
 use App\Http\Requests\UpdateArticlesRequest;
+use Illuminate\Support\Facades\DB;
 
 class ArticlesController extends Controller
 {
@@ -83,4 +86,12 @@ class ArticlesController extends Controller
     {
         //
     }
+
+    public function getArticlesBySubCategory(SubCategories $subCategory)
+    {
+        $articles = null;
+        $articles = DB::table('subcategory_articles_pivot')->where(["sub_category_id", "=", $subCategory->id])->get(["article_id"]);
+        return $articles;
+    }
+    
 }
