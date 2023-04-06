@@ -7,91 +7,49 @@ use App\Models\Categories;
 use App\Models\SubCategories;
 use App\Http\Requests\StoreArticlesRequest;
 use App\Http\Requests\UpdateArticlesRequest;
+use Brick\Math\BigInteger;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    
+    public function getArticlesBySubCategoryID(int $subCategoryID)
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreArticlesRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreArticlesRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Articles  $articles
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Articles $articles)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Articles  $articles
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Articles $articles)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateArticlesRequest  $request
-     * @param  \App\Models\Articles  $articles
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateArticlesRequest $request, Articles $articles)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Articles  $articles
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Articles $articles)
-    {
-        //
-    }
-
-    public function getArticlesBySubCategory(SubCategories $subCategory)
-    {
-        $articles = null;
-        $articles = DB::table('subcategory_articles_pivot')->where(["sub_category_id", "=", $subCategory->id])->get(["article_id"]);
+        $articles = Articles::whereIn('id', function($query) use ($subCategoryID) {
+            $query->select('article_id')
+                  ->from('subcategory_articles_pivot')
+                  ->where('sub_category_id', $subCategoryID);
+        })->get();
+        
         return $articles;
+        
+    }
+
+    public function getDistinctGroups(Collection $articles)
+    {
+        $groups = $articles->pluck('group')->unique();
+        
+        return $groups;
+        
+    }
+    public function setSessionValue(Request $request)
+    {
+        session(['subCategory' => $request->input('subCategory')]);
+        return response()->json(['subCategory' => session('subCategory')]);
     }
     
+    //public function setSessionValue(Request $request)
+    //{
+    //    $request->session()->put('sub_category_id', $request->input('subCategory'));
+//
+    //    $data = [
+    //        'message' => 'Session saved successfully.',
+    //        'sub_category_id' => $request->input('subCategory')
+    //    ];
+//
+    //    return response()->json($data);
+    //}
+
 }

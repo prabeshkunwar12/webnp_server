@@ -4,12 +4,14 @@
     use App\Http\Controllers\CategoriesController;
     use App\Http\Controllers\SubCategoriesController;
     use App\Http\Controllers\ArticlesController;
+    use Illuminate\Support\Facades\Session;
+
 
     @include ('bootstrapcdn.blade.php');
 
     $catCon = new CategoriesController();
     $subCatCon = new SubCategoriesController();
-    $articlesCon = new articlesController();
+    $articlesCon = new ArticlesController();
     setcookie('name1',2,600);
 ?>
 
@@ -20,6 +22,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Articles</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -155,27 +158,63 @@
             $subCategories = $subCatCon->getSubCategoriesByCategory($categories[$i-1]);
             $TotalSubCategories = $subCategories->count();
             for ($j = 1; $j <= $TotalSubCategories; $j += 3){
-                echo'
+                echo '
                     <section class="section">
                         <div class="container">
-
                             <div class="row text-center">
                                 <div class="col-lg-4">
-                                    <a href="javascript:void(0)" class="card border-0 text-dark">
+                                    <a class="card border-0 text-dark" href="#" onclick="event.preventDefault();
+                                        console.log(\'starting\');
+                                        $.ajax({
+                                            
+                                            url: \'/save_session_articles\',
+                                            type: \'POST\',
+                                            data: {subCategory: \'' . $subCategories[$j-1]->id . '\'},
+                                            headers: {
+                                                \'X-CSRF-TOKEN\': $(\'meta[name=\\\'csrf-token\\\']\').attr(\'content\')
+                                            },
+                                            success: function(data) {
+                                                console.log(data.subCategory);
+                                                window.location.href = \'/articleList\';
+                                            },
+                                            error: function(jqXHR, textStatus, errorThrown) {
+                                                console.log(\'Error saving session: \' + errorThrown);
+                                            }
+                                        });
+                                    ">
                                         <img class="card-img-top" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
                                         <span class="card-body">
-                                            <h4 class="title mt-4">'.$subCategories[$j-1]->name.'</h4>
+                                            <h4 class="title mt-4">' . $subCategories[$j-1]->name . '</h4>
                                         </span>
                                     </a>
                                 </div>
                 ';
+
                 if($j+1 <= $TotalSubCategories){
                     echo'
                                     <div class="col-lg-4">
-                                        <a href="javascript:void(0)" class="card border-0 text-dark">
-                                            <img class="card-img-top" src="imgs/stat.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                        <a class="card border-0 text-dark" href="#" onclick="event.preventDefault();
+                                            console.log(\'starting\');
+                                            $.ajax({
+                                                
+                                                url: \'/save_session_articles\',
+                                                type: \'POST\',
+                                                data: {subCategory: \'' . $subCategories[$j]->id . '\'},
+                                                headers: {
+                                                    \'X-CSRF-TOKEN\': $(\'meta[name=\\\'csrf-token\\\']\').attr(\'content\')
+                                                },
+                                                success: function(data) {
+                                                    console.log(data.subCategory);
+                                                    window.location.href = \'/articleList\';
+                                                },
+                                                error: function(jqXHR, textStatus, errorThrown) {
+                                                    console.log(\'Error saving session: \' + errorThrown);
+                                                }
+                                            });
+                                        ">
+                                            <img class="card-img-top" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
                                             <span class="card-body">
-                                                <h4 class="title mt-4">'.$subCategories[$j]->name.'</h4>
+                                                <h4 class="title mt-4">' . $subCategories[$j]->name . '</h4>
                                             </span>
                                         </a>
                                     </div>
@@ -183,10 +222,28 @@
                     if($j+2 <= $TotalSubCategories){
                         echo'
                                     <div class="col-lg-4">
-                                        <a href="javascript:void(0)" class="card border-0 text-dark">
-                                            <img class="card-img-top" src="imgs/track.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                        <a class="card border-0 text-dark" href="#" onclick="event.preventDefault();
+                                            console.log(\'starting\');
+                                            $.ajax({
+                                                
+                                                url: \'/save_session_articles\',
+                                                type: \'POST\',
+                                                data: {subCategory: \'' . $subCategories[$j+1]->id . '\'},
+                                                headers: {
+                                                    \'X-CSRF-TOKEN\': $(\'meta[name=\\\'csrf-token\\\']\').attr(\'content\')
+                                                },
+                                                success: function(data) {
+                                                    console.log(data.subCategory);
+                                                    window.location.href = \'/articleList\';
+                                                },
+                                                error: function(jqXHR, textStatus, errorThrown) {
+                                                    console.log(\'Error saving session: \' + errorThrown);
+                                                }
+                                            });
+                                        ">
+                                            <img class="card-img-top" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
                                             <span class="card-body">
-                                                <h4 class="title mt-4">'.$subCategories[$j+1]->name.'</h4>
+                                                <h4 class="title mt-4">' . $subCategories[$j+1]->name . '</h4>
                                             </span>
                                         </a>
                                     </div>
