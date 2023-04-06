@@ -6,6 +6,7 @@ use App\Models\SubCategories;
 use App\Models\Categories;
 use App\Http\Requests\StoreSubCategoriesRequest;
 use App\Http\Requests\UpdateSubCategoriesRequest;
+use Brick\Math\BigInteger;
 
 class SubCategoriesController extends Controller
 {
@@ -26,7 +27,12 @@ class SubCategoriesController extends Controller
         ->get();
         
         return $subCategories;
-    } 
+    }
+    
+    public function getSubCategoryByID(int $id)
+    {
+        return SubCategories::findOrFail($id);
+    }
 
     // returns the category of subcategory
     public function category(SubCategories $subCategories)

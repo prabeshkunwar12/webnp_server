@@ -7,17 +7,32 @@ use App\Models\Categories;
 use App\Models\SubCategories;
 use App\Http\Requests\StoreArticlesRequest;
 use App\Http\Requests\UpdateArticlesRequest;
+use Brick\Math\BigInteger;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
     
-    public function getArticlesBySubCategory(SubCategories $subCategory)
+    public function getArticlesBySubCategoryID(int $subCategoryID)
     {
-        $articles = null;
-        $articles = DB::table('subcategory_articles_pivot')->where(["sub_category_id", "=", $subCategory->id])->get(["article_id"]);
+        $articles = Articles::whereIn('id', function($query) use ($subCategoryID) {
+            $query->select('article_id')
+                  ->from('subcategory_articles_pivot')
+                  ->where('sub_category_id', $subCategoryID);
+        })->get();
+        
         return $articles;
+        
+    }
+
+    public function getDistinctGroups(Collection $articles)
+    {
+        $groups = $articles->pluck('group')->unique();
+        
+        return $groups;
+        
     }
     public function setSessionValue(Request $request)
     {
