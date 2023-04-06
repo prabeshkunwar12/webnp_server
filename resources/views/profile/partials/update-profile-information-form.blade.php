@@ -22,8 +22,15 @@
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
+        <div>
+            
+        <x-form-group name="role" label="Role" inline>
+            <x-form-radio name="role" value="User" label="User" />
+            <x-form-radio name="role" value="Nurse" label="Nurse" />
+        </x-form-group>
+        </div>
 
-       
+        
 
         <div>
             <x-input-label for="email" :value="__('Email')" />
