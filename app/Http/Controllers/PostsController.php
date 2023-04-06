@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\PostsImport;
 use App\Models\Posts;
 use Illuminate\Console\Scheduling\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 use Symfony\Component\HttpFoundation\Cookie;
 
 use Illuminate\Support\Facades\DB;
@@ -23,11 +25,17 @@ class PostsController extends Controller
      */
     public function get(int $articleNum)
     {
+        $post = null;
+        try {
+            $post = Posts::where([
+                ['id', '=', $articleNum]
+            ])->firstOrFail();
+        } catch (\Exception $e) {
+            
+            $post = null;
+        }
 
         
-        $post = Posts::where([
-            ['id', '=', $articleNum]
-        ])->firstOrFail();
         
                
         return $post;
@@ -42,18 +50,26 @@ class PostsController extends Controller
     public function getRecentPost(int $postNum)
     {
         $post = null;
+        try {
+            $posts = Posts::orderBy('id', 'desc')
+            ->limit($postNum+1)
+            ->get();
 
-        $posts = Posts::orderBy('id', 'desc')
-        ->limit($postNum+1)
-        ->get();
+            if ($posts->isNotEmpty()) {
+                if($posts->has($postNum-1)){
+                    $post = $posts[$postNum-1];
+                }
+                else
+                $post = $posts[0];
+                }  
+        } catch (\Exception $e) {
+            
+            $post = null;
+        }
 
-        if ($posts->isNotEmpty()) {
-            if($posts->has($postNum-1)){
-                $post = $posts[$postNum-1];
-            }
-            else
-            $post = $posts[0];
-        }   
+        
+
+         
         return $post;
     }
 
@@ -62,20 +78,40 @@ class PostsController extends Controller
         $maxPosts = 5;
         $post = null;
 
-        $posts = Posts::orderBy('view_count', 'desc')
-        ->limit($maxPosts)
-        ->get();
+        try {
+            $posts = Posts::orderBy('view_count', 'desc')
+            ->limit($maxPosts)
+            ->get();
 
-        if ($posts->isNotEmpty()) {
-            if($posts->has($postNum-1)){
-                $post = $posts[$postNum-1];
+            if ($posts->isNotEmpty()) {
+                if($posts->has($postNum-1)){
+                    $post = $posts[$postNum-1];
+                }
+                else
+                $post = $posts[0];
             }
-            else
-            $post = $posts[0];
+        } catch (\Exception $e) {
+            
+            $post = null;
         }
 
         
+
+        
         return $post;
+    }
+
+    public function getMostViewedPostContent(int $postNum){
+        
+        $post = $this->getMostViewedPost($postNum);
+
+        //If no articles found
+        if(!$post)
+            return "Default Content";
+        
+        //$post->incrementViewCount();
+        return $post->content;
+    
     }
 
     public function getRecentPostName(int $articleNum){
@@ -97,7 +133,8 @@ class PostsController extends Controller
         if(!$post)
             return "Default Content";
         
-        $post->incrementViewCount();
+        
+        //$post->incrementViewCount();
         return $post->content;
     
     }
@@ -125,4 +162,21 @@ class PostsController extends Controller
         return response($post->content);
         
     }
+
+    public function importPosts(Request $request) 
+    {
+        $request->validate([
+            'excelFile' => 'required|mimes:xlsx,csv,xls,xlx'
+        ]);
+
+        Excel::import(new PostsImport, $request->file('excelFile'));
+        
+        return view('/homepage');
+    }
+
+    public function create(){
+        return view('/homepage');
+    }
+
+    
 }
