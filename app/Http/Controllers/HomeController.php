@@ -32,12 +32,11 @@ class HomeController extends Controller
     public function getCategory(int $categoryNum)
     {
         //Database that controller will check for the articles
-        $tableName = 'categories';
+        $tableName = 'categories';  
+        $category = null;  
 
-        $category = null;
-        
-        //array of collection
-        $categories = DB::table($tableName)
+        try {
+            $categories = DB::table($tableName)
             ->where('id', $categoryNum)
             ->get();
 
@@ -46,6 +45,12 @@ class HomeController extends Controller
                 $category = $categories[0];
             }
         }
+        } catch (\Exception $e) {
+            
+            $category = null;
+        }
+        //array of collection
+        
 
         return $category;
     }
