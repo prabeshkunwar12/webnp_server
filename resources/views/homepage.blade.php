@@ -23,8 +23,10 @@ setcookie('name1',2,600);
     <body>
         <?php @include 'header.blade.php'?>
 
-        <div class="intro-image">
-            <img src="/imgs/logo.png" alt="Error" class="img-fluid">
+        <div class="intro">
+            <div class="intro-image">
+                <img src="/imgs/logo.png" alt="Error" class="img-fluid">
+            </div>
         </div>
 
         <figure class="text-center">

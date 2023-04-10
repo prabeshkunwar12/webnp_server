@@ -1,41 +1,92 @@
-.intro-image{
-    text-align: center;
-    margin-top: 7%;
-    margin-bottom: 8%;
+.intro{
+  background-image: url("/imgs/back.png");
+  height: 70%;
+  margin-bottom: 5%;
 }
 
-.Nav-top .social-media{
-    text-align: right;
-    margin-right: 2%;
+.intro-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.Nav-top .social-media {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1%;
+}
+
+.social-media svg {
+  margin-right: 7px;
+}
+
+
+.auth {
+  text-align: right;
+  margin-right: 1%;
 }
 
 .search-click {
-    border: 1px solid #ccc;
-    outline: none;
-    background-size: 22px;
-    background-position: 13px;
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
-    padding: 25px;
-    transition: all 0.5s;
-  }
-  .search-click:focus {
-    width: 300px;
-    padding-left: 50px;
-  }
-  .search-click {
-    position: relative;
-    overflow: hidden;
-    height: 50px;
-  }
-  .search-click input {
-    background: transparent;
-    border: 1px solid #ccc;
-    outline: none;
-    position: absolute;
-    width: 300px;
-    height: 50px;
-    left: 0%;
-    padding: 10px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  outline: none;
+  background-size: 22px;
+  background-position: 13px;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  transition: all 0.5s;
+  position: relative; /* added */
+}
+
+.search-click:focus {
+  width: 300px;
+  padding-left: 50px;
+}
+
+.search-click input {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  width: 300px;
+  height: 50px;
+  left: 0%;
+  padding: 10px;
+}
+
+.container_nav {
+  max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  display: contents;
+}
+
+.sidebar {
+  flex-basis: 20%;
+  margin-right: 20px;
+}
+
+.main-content {
+  flex-basis: 80%;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-nav .active > .nav-link {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
