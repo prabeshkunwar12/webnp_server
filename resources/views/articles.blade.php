@@ -197,7 +197,7 @@
 
                 if (file_exists($imagePath)) {
                     echo '
-                                            <img class="card-img-top" src="'.$imagePath.'" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                            <img class="card-img-top" src="'.$imagePath.'" alt="'.$subCategories[$j-1]->img_alt.'">
                     ';
                 } else {
                     echo '
@@ -242,7 +242,7 @@
 
                     if (file_exists($imagePath)) {
                         echo '
-                                                <img class="card-img-top" src="'.$imagePath.'" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                                <img class="card-img-top" src="'.$imagePath.'" alt="'.$subCategories[$j]->img_alt.'">
                         ';
                     } else {
                         echo '
@@ -283,7 +283,7 @@
 
                                         if (file_exists($imagePath)) {
                                             echo '
-                                                                    <img class="card-img-top" src="'.$imagePath.'" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                                                    <img class="card-img-top" src="'.$imagePath.'" alt="'.$subCategories[$j+1]->img_alt.'">
                                             ';
                                         } else {
                                             echo '
