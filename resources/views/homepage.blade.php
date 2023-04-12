@@ -3,11 +3,14 @@ namespace resources\views;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\SubCategoriesController;
+
 
 @include ('bootstrapcdn.blade.php');
 
 $homeCon = new HomeController();
 $postCon = new PostsController();
+$subCatCon = new SubCategoriesController();
 setcookie('name1',2,600);
 ?>
 <!DOCTYPE HTML>
@@ -98,7 +101,7 @@ setcookie('name1',2,600);
                                     echo'
                                         <li>
                                             <a href = "#">
-                                                <h5>&#8827 Default Name</h5>
+                                                <h5>&#8827 '.$subCatCon->getSubCategoryByID($i)->name.'</h5>
                                             </a>
                                         </li>
                                     ';
