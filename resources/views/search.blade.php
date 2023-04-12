@@ -30,16 +30,21 @@ $postCon = new PostsController();
                     
             <hr>
             
-
-
-                @foreach ($result as $customer)
+            @if (!$result)
             
+                <h5> No Results Found</h5>
+
+            @else
+
+                @foreach ($result as $post)
+                
+
                 <div class = "topicsbox container">
                     <ul class="topicslist">
                         <div class="topicscol">
                             <li>
-                                <a href ="{{ $customer->content }}">
-                                    <h5>&#8827   {{ $customer->id }}</h5> 
+                                <a href ="{{ $post->content }}">
+                                    <h5>&#8827   {{ $post->id }}</h5> 
                                 </a>
                             </li>
                             
@@ -51,7 +56,8 @@ $postCon = new PostsController();
                 <br><br>
                 @endforeach
 
-            {{ $result->links() }}
+            {{ $result->appends(['search_query'=>request()->query('search_query')])->links() }}
+        @endif
         <?php @include 'Footer/footer.blade.php' ?>
     </body>
 </html>

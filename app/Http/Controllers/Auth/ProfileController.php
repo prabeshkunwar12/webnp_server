@@ -35,8 +35,10 @@ class ProfileController extends Controller
             
         }
         $user = $request->user();
-        $user->assignRole('$request->role');
+       
+        $user->syncRoles([$request->role]);
         $request->user()->save();
+        
         
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }

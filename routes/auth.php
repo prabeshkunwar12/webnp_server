@@ -54,7 +54,7 @@ Route::middleware('auth')->group(function () {
         return view('homepage');
     })->name('homepage');
     
-    Route::group(['middleware' => ['role:User|Editor|Nurse Practioner']], function () {
+    Route::group(['middleware' => ['role:User|Editor|Nurse Practioner|Admin']], function () {
         
         
 
@@ -84,7 +84,9 @@ Route::middleware('auth')->group(function () {
                     ->name('logout');
     });
     
-
+    Route::group(['middleware' => ['role:Admin']], function () {
+        Route::get('dashboard', [Admin\DashboardController::class, 'index']);
+    });
     
 });
 

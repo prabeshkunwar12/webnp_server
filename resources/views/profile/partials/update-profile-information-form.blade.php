@@ -24,12 +24,13 @@
         </div>
         <div>
             
-        <x-form-group name="role" label="Role" inline>
-            <x-form-radio name="role" value="User" label="User" />
-            <x-form-radio name="role" value="Nurse" label="Nurse" />
-        </x-form-group>
-        </div>
-
+        <label for="role">Choose a role:</label>
+        <select id="role" name="role">
+        <option value="User">User</option>
+        <option value="Nurse Practioner">Nurse Practioner</option>
+        <option value="Editor">Editor</option>
+        <option value="Admin">Admin</option>
+        </select>
         
 
         <div>
