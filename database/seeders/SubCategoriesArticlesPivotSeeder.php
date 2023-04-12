@@ -20,7 +20,7 @@ class SubCategoriesArticlesPivotSeeder extends Seeder
         $header = fgetcsv($csv);
 
         while ($data = fgetcsv($csv)){
-            DB::table('subcategory_articles_pivot')->insert([
+            DB::table('subCategory_articles_pivot')->insert([
                 'sub_category_id' => $data[0],
                 'article_id' => $data[1],
                 // Add other columns as needed
