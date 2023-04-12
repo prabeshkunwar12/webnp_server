@@ -19,7 +19,7 @@ class ArticlesController extends Controller
     {
         $articles = Articles::whereIn('id', function($query) use ($subCategoryID) {
             $query->select('article_id')
-                  ->from('subcategory_articles_pivot')
+                  ->from('subCategory_articles_pivot')
                   ->where('sub_category_id', $subCategoryID);
         })->get();
         
