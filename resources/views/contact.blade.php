@@ -65,9 +65,9 @@
               }
         </style>
 
-
+        <?php @include 'Footer/footer.blade.php' ?>
     </body>
 
-<?php @include 'Footer/footer.blade.php' ?>
+
 </html>
    
