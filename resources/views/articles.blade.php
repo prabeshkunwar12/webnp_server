@@ -238,7 +238,7 @@
                                             });
                                         ">
                     ';
-                    $imagePath = "imgs/articlesImgs/".trim($subCategories[$j]->name).".jpg"; 
+                    $imagePath = "imgs/ArticlesImgs/".trim($subCategories[$j]->name).".jpg"; 
 
                     if (file_exists($imagePath)) {
                         echo '
@@ -279,7 +279,7 @@
                                             });
                                         ">
                                         ';
-                                        $imagePath = "imgs/articlesImgs/".trim($subCategories[$j+1]->name).".jpg"; 
+                                        $imagePath = "imgs/ArticlesImgs/".trim($subCategories[$j+1]->name).".jpg"; 
 
                                         if (file_exists($imagePath)) {
                                             echo '
