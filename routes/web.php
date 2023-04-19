@@ -14,6 +14,7 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\Admin\UserController;
 
 
 //
@@ -135,6 +136,16 @@ Route::middleware('auth')->group(function () {
                 ->name('logout');
 });
 
+Route::middleware(['admin'])->prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+    Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
+    Route::get('/users/create', [UserController::class, 'create'])->name('admin.users.create');
+    Route::post('/users/store', [UserController::class, 'store'])->name('admin.users.store');
+    Route::delete('/users/{user}/destroy', [UserController::class, 'destroy'])->name('admin.users.destroy');
+});
 
 
 
