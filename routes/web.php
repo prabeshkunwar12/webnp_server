@@ -15,6 +15,8 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\ContactMessageController;
+
 
 
 //
@@ -62,7 +64,12 @@ Route::get('/articles', function () {
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
+
+
+Route::post('/contact/store', [ContactMessageController::class, 'store'])->name('contact.store');
+Route::get('/admin/contact-messages', [UserController::class, 'contactMessages'])->name('admin.contact-messages.index');
+
 
 Route::get('/search', [PostsController::class, 'create'])->name('search.create');
 
@@ -145,6 +152,9 @@ Route::middleware(['admin'])->prefix('admin')->group(function () {
     Route::get('/users/create', [UserController::class, 'create'])->name('admin.users.create');
     Route::post('/users/store', [UserController::class, 'store'])->name('admin.users.store');
     Route::delete('/users/{user}/destroy', [UserController::class, 'destroy'])->name('admin.users.destroy');
+
+    Route::get('/contact-messages', [ContactMessageController::class, 'index'])->name('admin.contact-messages.index');
+
 });
 
 

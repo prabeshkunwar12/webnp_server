@@ -38,19 +38,24 @@ return [
             'icon' => 'fas fa-fw fa-users',
         ],
         [
+            'text' => 'Messages',
+            'url'  => 'admin/contact-messages',
+            'icon' => 'fas fa-envelope',
+        ],
+        [
             'text' => 'Discussion',
             'url'  => 'discussion',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'far fa-comments',
         ],
         [
             'text' => 'Documentation',
             'url'  => 'Documentation',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-book',
         ],
         [
             'text' => 'Resources',
             'url'  => 'education',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-folder',
         ],
         [
             'type'         => 'navbar-notification',

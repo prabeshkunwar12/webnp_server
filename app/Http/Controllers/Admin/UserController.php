@@ -86,6 +86,13 @@ class UserController extends Controller
         //
     }
 
+    public function contactMessages()
+    {
+        $contactMessages = ContactMessage::all();
+        return view('admin.contact-messages.index', compact('contactMessages'));
+    }
+
+
     /**
      * Remove the specified resource from storage.
      *
