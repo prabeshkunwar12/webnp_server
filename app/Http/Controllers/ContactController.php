@@ -2,28 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactMessage;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail; 
-use App\Mail\ContactFormEmail;
 
 class ContactController extends Controller
 {
-    public function create()
-{
-    return view('contact');
-}
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'email' => 'required|email',
+            'message' => 'required',
+        ]);
 
-public function store(Request $request)
-{
-    $email = 'mnobin@upei.ca';
-    $data = $request->validate([
-        'email' => 'required|email',
-        'message' => 'required',
-    ]);
+        $contactMessage = new ContactMessage([
+            'email' => $validatedData['email'],
+            'message' => $validatedData['message'],
+        ]);
+        $contactMessage->save();
 
-    Mail::to($email)->send(new ContactFormEmail($data));
-
-    return back()->with('message', 'Thanks for your message. We will be in touch.');
-}
-
+        return redirect()->route('contact')->with('success', 'Your message has been sent successfully.');
+    }
 }
