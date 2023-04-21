@@ -69,8 +69,8 @@
 
           <div class="col-lg-4 col-md-6 search-container">
             <h4>Find the topic you're looking for!</h4>
-            <form action="/action_page.php">
-              <input type="text" placeholder="Search.." name="search">
+            <form  role="search" action = "/search" method="GET">
+              <input  type="text" class="search-click" name="search_query" placeholder="Search here...">
               <button type="submit"><i class="fa fa-search"></i></button>
             </form>
           </div>

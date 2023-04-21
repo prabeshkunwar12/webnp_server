@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Search\SearchController;
+use App\Http\Controllers\ThreadController;
+use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
@@ -15,7 +17,7 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Admin\DashboardController;
-
+use App\Http\Controllers\Admin\UserController;
 
 //
 
@@ -24,6 +26,7 @@ Route::get('/', function () {
 });
 
 Route::get('/homepage', function () {
+    
     return view('homepage');
 });
 
@@ -57,7 +60,7 @@ Route::get('/aboutus', function () {
 });
 
 Route::get('/articles', function () {
-    return view('Articles');
+    return view('articles');
 });
 
 Route::get('/contact', function () {
@@ -87,11 +90,37 @@ Route::get('/dashboard', function () {
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [App\Http\Controllers\Auth\ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profile', [App\Http\Controllers\Auth\ProfileController::class, 'create'])->name('profile.create');
+    Route::get('/profileEdit', [App\Http\Controllers\Auth\ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [App\Http\Controllers\Auth\ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [App\Http\Controllers\Auth\ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('register', [RegisteredUserController::class, 'create'])
+    ->name('register');
+
+    Route::post('register', [RegisteredUserController::class, 'store']);
+
+    Route::get('login', [AuthenticatedSessionController::class, 'create'])
+        ->name('login');
+
+    Route::post('login', [AuthenticatedSessionController::class, 'store']);
+
+    Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
+        ->name('password.request');
+
+    Route::post('forgot-password', [PasswordResetLinkController::class, 'store'])
+        ->name('password.email');
+
+    Route::get('reset-password/{token}', [NewPasswordController::class, 'create'])
+        ->name('password.reset');
+
+    Route::post('reset-password', [NewPasswordController::class, 'store'])
+        ->name('password.store');
+        
+
     Route::group(['middleware' => ['role:User|Editor|Nurse Practioner|Admin']], function () {
-        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::get('/profile', [App\Http\Controllers\Auth\ProfileController::class, 'create'])->name('profile.create');
+    Route::get('/profileEdit', [App\Http\Controllers\Auth\ProfileController::class, 'edit'])->name('profile.edit');
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
         
@@ -115,32 +144,12 @@ Route::middleware('auth')->group(function () {
     
         Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                     ->name('logout');
-    });
-    
+        });
+       
 });
+ 
 
-Route::get('register', [RegisteredUserController::class, 'create'])
-                ->name('register');
 
-    Route::post('register', [RegisteredUserController::class, 'store']);
-
-    Route::get('login', [AuthenticatedSessionController::class, 'create'])
-                ->name('login');
-
-    Route::post('login', [AuthenticatedSessionController::class, 'store']);
-
-    Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
-                ->name('password.request');
-
-    Route::post('forgot-password', [PasswordResetLinkController::class, 'store'])
-                ->name('password.email');
-
-    Route::get('reset-password/{token}', [NewPasswordController::class, 'create'])
-                ->name('password.reset');
-
-    Route::post('reset-password', [NewPasswordController::class, 'store'])
-                ->name('password.store');
-                
     Route::group(['middleware' => ['role:Admin']], function () {
         
         Route::get('dashboard', [Admin\DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
@@ -151,5 +160,55 @@ Route::get('register', [RegisteredUserController::class, 'create'])
             return view('dashboard');
     })->middleware(['auth', 'verified'])->name('dashboard');
     });
-                
-             
+
+    Route::get('threads', [ThreadController::class, 'index'])->name('threads.index');
+    Route::resource('threads', ThreadController::class)->except(['edit', 'update', 'destroy']);
+    Route::post('threads/{thread}/replies', [ReplyController::class, 'store'])->name('replies.store');
+    Route::delete('/threads/{thread}', [ThreadController::class,'destroy'])->name('threads.destroy');
+                    
+    Route::middleware('guest')->group(function () {
+        Route::get('/', function () {
+            return view('homepage');
+        });
+        
+        Route::get('homepage', function () {
+            return view('homepage');
+        });
+    
+        
+        
+        Route::get('register', [RegisteredUserController::class, 'create'])
+                    ->name('register');
+    
+        Route::post('register', [RegisteredUserController::class, 'store']);
+    
+        Route::get('login', [AuthenticatedSessionController::class, 'create'])
+                    ->name('login');
+    
+        Route::post('login', [AuthenticatedSessionController::class, 'store']);
+    
+        Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
+                    ->name('password.request');
+    
+        Route::post('forgot-password', [PasswordResetLinkController::class, 'store'])
+                    ->name('password.email');
+    
+        Route::get('reset-password/{token}', [NewPasswordController::class, 'create'])
+                    ->name('password.reset');
+    
+        Route::post('reset-password', [NewPasswordController::class, 'store'])
+                    ->name('password.store');
+    
+                    
+    });
+
+    Route::middleware(['admin'])->prefix('admin')->group(function () {
+        Route::get('/', function () {
+            return view('admin.dashboard');
+        })->name('admin.dashboard');
+    
+        Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
+        Route::get('/users/create', [UserController::class, 'create'])->name('admin.users.create');
+        Route::post('/users/store', [UserController::class, 'store'])->name('admin.users.store');
+        Route::delete('/users/{user}/destroy', [UserController::class, 'destroy'])->name('admin.users.destroy');
+    });

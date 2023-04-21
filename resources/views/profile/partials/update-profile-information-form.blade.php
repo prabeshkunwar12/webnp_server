@@ -1,4 +1,5 @@
 <section>
+@section('content')
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
             {{ __('Profile Information') }}
@@ -18,12 +19,12 @@
         @method('patch')
 
         <div>
-            <x-input-label for="name" :value="__('Name')" />
+            <input-label for="name" :value="__('Name')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
         <div>
-            
+
         <label for="role">Choose a role:</label>
         <select id="role" name="role">
         <option value="User">User</option>
@@ -70,4 +71,5 @@
             @endif
         </div>
     </form>
+    @endsection
 </section>

@@ -17,7 +17,9 @@ class DatabaseSeeder extends Seeder
         Posts::factory(5)->create();
         $this->call([
             RoleAndPermissionSeeder::class,
-
+            ArticlesSeeder::class,
+            SubCategoriesSeeder::class,
+            CategoriesArticlesPivotSeeder::class,
         ]);
     }
 }

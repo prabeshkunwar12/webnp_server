@@ -52,7 +52,23 @@ setcookie('name1',2,600);
                 
                     <div class="row">
                         <?php
-                            for($i=1; $i<=5; $i++){
+                        echo'
+                        <div class = "recentarticle-main">
+                            <a href="//">
+                            <div class="recentarticle-img">
+                            <img src = "../imgs/wellness-mental-health.jpg" >
+                            </div>
+                            <div class="recentcaption">
+                                A look at the effects of smoking
+                            </div>
+                            </a>
+                            
+                            <div class="seemore_main">
+                                <div class="see_more"><a href="//">SEE MORE</a></div>
+                            </div>
+                        </div>
+                    ';
+                            for($i=2; $i<=5; $i++){
                                 echo'
                                     <div class = "recentarticle-main vanish">
                                         <a href="//">
@@ -76,14 +92,15 @@ setcookie('name1',2,600);
             </div>
             </div>
             <!-- List of Categories -->
-            <div class="container topicsheader">
+            <div class = "container topicscol">
+            <div class="recentarticlesheader">
                 <h3>
                     <b>Medical Categories</b>
                 </h3>
                 <div class="seeall_main">
                     <div class="see_all"><a href="/articles">SHOW ALL</a></div>
                 </div>
-                    
+                <p>Choose a catrgory to find numerous helpful resources! </p>        
             <hr>
             </div> 
             
@@ -106,7 +123,8 @@ setcookie('name1',2,600);
                     </ul>
                     <hr>
                 </div>
-                <br><br>
+            </div>
+               
 
             <!-- Most Viewed Section -->
         <div style="background-color: var(--tertiary);">
@@ -123,7 +141,23 @@ setcookie('name1',2,600);
         </div>
         <div class="row">
             <?php
-                for($i=1; $i<=5; $i++){
+            echo'
+            <div class = "recentarticle-main ">
+                <a href="//">
+                <div class="recentarticle-img">
+                <img src = "../imgs/wellness-mental-health.jpg" >
+                </div>
+                <div class="recentcaption">
+                    A look at the effects of smoking
+                </div>
+                </a>
+                
+                <div class="seemore_main">
+                    <div class="see_more"><a href="//">SEE MORE</a></div>
+                </div>
+            </div>
+        ';
+                for($i=2; $i<=5; $i++){
                     echo'
                         <div class = "recentarticle-main vanish">
                             <a href="//">
@@ -150,11 +184,11 @@ setcookie('name1',2,600);
 
 
             <!-- Introduction -->
-                <div class="container-fluid bg-light shadow">
+            <div class="container-fluid bg-light shadow">
             <h1 style="text-align: center;">Introduction</h1>
 
-            <div class="row" >
-                <div class="col-3 p-3" style="text-align: center;"><img class="rounded-circle" src="imgs/gail1.jpg"></div>
+            <div class="row " >
+                <div class="col-3 p-3 intro-header"><img class="rounded-circle" src="imgs/gail1.jpg"></div>
 
                 <div class="col-9 p-3" text-align="center">
                     <i>
@@ -184,5 +218,6 @@ setcookie('name1',2,600);
 
         
         <?php @include 'Footer/footer.blade.php' ?>
+        
         </body>
     </html>

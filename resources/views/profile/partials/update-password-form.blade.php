@@ -1,4 +1,7 @@
+
 <section>
+@section('content')
+    @section('header')
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
             {{ __('Update Password') }}
@@ -8,7 +11,9 @@
             {{ __('Ensure your account is using a long, random password to stay secure.') }}
         </p>
     </header>
+    @endsection
 
+   
     <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
         @csrf
         @method('put')
@@ -44,4 +49,5 @@
             @endif
         </div>
     </form>
+    @endsection
 </section>

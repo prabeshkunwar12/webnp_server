@@ -12,12 +12,21 @@ use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
+
+    public function create(Request $request): View
+    {
+        
+        return view('profilePage.profilePageView', [
+            'user' => $request->user(),
+        ]);
+    }
     /**
      * Display the user's profile form.
      */
     public function edit(Request $request): View
     {
-        return view('profile.edit', [
+        
+        return view('profilePage.profileEdit', [
             'user' => $request->user(),
         ]);
     }
@@ -35,8 +44,10 @@ class ProfileController extends Controller
             
         }
         $user = $request->user();
-       
+       if($request->role){
         $user->syncRoles([$request->role]);
+       }
+        
         $request->user()->save();
         
         
