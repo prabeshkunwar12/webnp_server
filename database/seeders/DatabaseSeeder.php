@@ -14,12 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Posts::factory(5)->create();
+      //  Posts::factory(5)->create();
         $this->call([
-            RoleAndPermissionSeeder::class,
-            ArticlesSeeder::class,
+            CategoriesSeeder::class,
             SubCategoriesSeeder::class,
-            CategoriesArticlesPivotSeeder::class,
+            ArticlesSeeder::class,
+            SubCategoriesArticlesPivotSeeder::class,
+            RoleAndPermissionSeeder::class,
         ]);
     }
 }

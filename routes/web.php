@@ -18,6 +18,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\ContactMessageController;
 
 //
 
@@ -65,7 +66,7 @@ Route::get('/articles', function () {
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
 
 Route::get('/search', [PostsController::class, 'create'])->name('search.create');
 
@@ -167,13 +168,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/threads/{thread}', [ThreadController::class,'destroy'])->name('threads.destroy');
                     
     Route::middleware('guest')->group(function () {
-        Route::get('/', function () {
-            return view('homepage');
-        });
         
-        Route::get('homepage', function () {
-            return view('homepage');
-        });
     
         
         
@@ -202,6 +197,7 @@ Route::middleware('auth')->group(function () {
                     
     });
 
+    
     Route::middleware(['admin'])->prefix('admin')->group(function () {
         Route::get('/', function () {
             return view('admin.dashboard');
@@ -211,4 +207,6 @@ Route::middleware('auth')->group(function () {
         Route::get('/users/create', [UserController::class, 'create'])->name('admin.users.create');
         Route::post('/users/store', [UserController::class, 'store'])->name('admin.users.store');
         Route::delete('/users/{user}/destroy', [UserController::class, 'destroy'])->name('admin.users.destroy');
+
+        Route::get('/contact-messages', [ContactMessageController::class, 'index'])->name('admin.contact-messages.index');
     });

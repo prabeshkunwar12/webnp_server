@@ -26,7 +26,11 @@ class ArticlesController extends Controller
         return $articles;
         
     }
-
+    public function getRecentArticles()
+    {
+        $articles = Articles::orderBy('created_at', 'desc')->take(16)->get();
+        return $articles;
+    }
     public function getDistinctGroups(Collection $articles)
     {
         $groups = $articles->pluck('group')->unique();
