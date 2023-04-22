@@ -59,6 +59,7 @@
               left: 35%;
               right: 35%;
               bottom: 20%;
+              margin-bottom: 40rem;
               box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
               background-color: aliceblue;
               border-radius: 10px;
@@ -69,6 +70,8 @@
               text-align: center;
           }
         </style>
+
+        <br><br><br><br><br><br><br><br>
         <?php @include 'Footer/footer.blade.php' ?>
 
       </body>
