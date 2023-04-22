@@ -57,6 +57,9 @@
                 <li class="nav-item <?php echo request()->is('/') ? 'active' : ''; ?>">
                   <a class="nav-link" href="/">Home</a>
                 </li>
+                <li class="nav-item <?php echo request()->is('discussion_posts') ? 'active' : ''; ?>">
+                  <a class="nav-link" href="/discussion_posts">Posts</a>
+                </li>
                 <li class="nav-item <?php echo request()->is('contact') ? 'active' : ''; ?>">
                   <a class="nav-link" href="/contact">Contact</a>
                 </li>

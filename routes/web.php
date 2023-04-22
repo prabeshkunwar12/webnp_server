@@ -14,6 +14,9 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\DiscussionPostController;
+use App\Http\Controllers\DiscussionCommentController;
+use App\Http\Controllers\DiscussionLikeController;
 
 
 //
@@ -105,6 +108,11 @@ Route::post('reset-password', [NewPasswordController::class, 'store'])
             ->name('password.store');
 
 
+Route::resource('discussion_posts', DiscussionPostController::class)->middleware('auth');
+Route::post('discussion_posts/{discussion_post}/comments', [DiscussionCommentController::class, 'store'])->middleware('auth')->name('discussion_comments.store');
+Route::post('discussion_posts/{discussion_post}/likes', [DiscussionLikeController::class, 'store'])->middleware('auth')->name('discussion_likes.store');
+Route::delete('discussion_posts/{discussion_post}/likes', [DiscussionLikeController::class, 'destroy'])->middleware('auth')->name('discussion_likes.destroy');
+            
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');

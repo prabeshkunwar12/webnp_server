@@ -64,7 +64,10 @@
                 text-align: center;
               }
         </style>
-
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('discussion_posts.index') }}">Discussion Posts</a>
+      </li>
+      
         <?php @include 'Footer/footer.blade.php' ?>
     </body>
 
