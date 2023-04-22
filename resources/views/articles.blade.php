@@ -127,7 +127,7 @@
                     <div class="page active" id="page'.$i.'">
                         <!--Category starts here-->
 
-                        <nav class="nav nav-pills nav-fill">
+                        <nav class="nav nav-pills nav-fill flex-column flex-sm-row">
                             
                 ';
             }
