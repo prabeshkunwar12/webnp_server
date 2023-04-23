@@ -86,7 +86,7 @@
 
 @section('content')
 <div class="container py-3">
-  <a href="{{ URL::previous() }}" class="btn btn-secondary btn-sm">Back</a>
+  <a href="{{ route('threads.index') }}" class="btn btn-secondary btn-sm">Back</a>
   <div class="row">
     <div class="col-md-8">
       <div class="card">
