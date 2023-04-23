@@ -107,6 +107,7 @@
       color: #777;
     }
   </style>
+  <title>Discussion Forum</title>
 </head>
   <body>
     <?php @include 'header.blade.php'?>
