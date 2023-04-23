@@ -92,7 +92,7 @@
           color: #333;
         }
       </style>
-      
+      <title>Create Discussion Forum</title>
 </head>
 
 @section('content')
