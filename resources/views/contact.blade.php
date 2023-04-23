@@ -64,6 +64,7 @@
               border-radius: 10px;
           }
 
+
           .contact-form{
               margin: 5%;
               text-align: center;
@@ -71,7 +72,6 @@
         </style>
         
         <?php @include 'Footer/footer.blade.php' ?>
-
       </body>
       </html>
       

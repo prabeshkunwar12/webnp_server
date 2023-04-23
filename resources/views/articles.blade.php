@@ -23,6 +23,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <title>Articles</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -103,6 +105,13 @@
         .process{
         margin-bottom: 5%;
         }
+
+        .card-img-top {
+            height: 300px; /* Specify the desired height */
+            width: 100%; /* Specify the desired width */
+            object-fit: cover; /* Use object-fit property to control how the image is resized */
+            padding-top: 30px;
+        }
     </style>
   </head>
   <body>
@@ -118,7 +127,7 @@
                     <div class="page active" id="page'.$i.'">
                         <!--Category starts here-->
 
-                        <nav class="nav nav-pills nav-fill">
+                        <nav class="nav nav-pills nav-fill flex-column flex-sm-row">
                             
                 ';
             }
@@ -182,7 +191,23 @@
                                             }
                                         });
                                     ">
-                                        <img class="card-img-top" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                ';
+                
+                $imagePath = "imgs/ArticlesImgs/".trim($subCategories[$j-1]->name).".jpg"; 
+
+                if (file_exists($imagePath)) {
+                    echo '
+                                            <img class="card-img-top" src="'.$imagePath.'" alt="'.$subCategories[$j-1]->img_alt.'">
+                    ';
+                } else {
+                    echo '
+                                            <img class="card-img-top" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                    ';
+                }
+
+                
+
+                echo '
                                         <span class="card-body">
                                             <h4 class="title mt-4">' . $subCategories[$j-1]->name . '</h4>
                                         </span>
@@ -212,7 +237,19 @@
                                                 }
                                             });
                                         ">
-                                            <img class="card-img-top" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                    ';
+                    $imagePath = "imgs/ArticlesImgs/".trim($subCategories[$j]->name).".jpg"; 
+
+                    if (file_exists($imagePath)) {
+                        echo '
+                                                <img class="card-img-top" src="'.$imagePath.'" alt="'.$subCategories[$j]->img_alt.'">
+                        ';
+                    } else {
+                        echo '
+                                                <img class="card-img-top" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        ';
+                    }
+                    echo '
                                             <span class="card-body">
                                                 <h4 class="title mt-4">' . $subCategories[$j]->name . '</h4>
                                             </span>
@@ -241,7 +278,20 @@
                                                 }
                                             });
                                         ">
-                                            <img class="card-img-top" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                        ';
+                                        $imagePath = "imgs/ArticlesImgs/".trim($subCategories[$j+1]->name).".jpg"; 
+
+                                        if (file_exists($imagePath)) {
+                                            echo '
+                                                                    <img class="card-img-top" src="'.$imagePath.'" alt="'.$subCategories[$j+1]->img_alt.'">
+                                            ';
+                                        } else {
+                                            echo '
+                                                                    <img class="card-img-top" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                            ';
+                                        }
+
+                                        echo '
                                             <span class="card-body">
                                                 <h4 class="title mt-4">' . $subCategories[$j+1]->name . '</h4>
                                             </span>

@@ -11,5 +11,7 @@
     <p>Welcome, {{ Auth::user()->name }}</p>
 
     <a href="{{ route('admin.users.index')}}" class="btn btn-primary">User Management</a>
+
+    <a href="{{ route('admin.contact-messages.index') }}" class="btn btn-primary">Contact Messages</a>
     
 @stop

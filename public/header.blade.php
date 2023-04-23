@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   </head>
   <body>
+
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 
@@ -45,6 +47,7 @@
           <div class="container-fluid">
                 <div class="container_nav">
                     <a class="navbar-brand" href="/homepage">
+
                       <img src="/imgs/logo.png" alt="Bootstrap" width="180" height="80">
                     </a>
                 </div>
@@ -59,6 +62,7 @@
                 <li class="nav-item <?php echo request()->is('discussion_posts') ? 'active' : ''; ?>">
                   <a class="nav-link" href="/discussion_posts">Posts</a>
                 </li>
+
                 <li class="nav-item <?php echo request()->is('contact') ? 'active' : ''; ?>">
                   <a class="nav-link" href="/contact">Contact</a>
                 </li>
@@ -90,10 +94,15 @@
                 </div>
             </form>                         
               
+
             </div>
           </div>
         </nav>
 
-        
+        <div class="auth">
+          <a class="nav-link" style="display: inline-block;" href="/login">Login</a>
+          <a class="nav-link" style="display: inline-block;" href="/register">Register</a>
+        </div>   
+
     </body>
 </html>

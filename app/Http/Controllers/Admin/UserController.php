@@ -13,6 +13,7 @@ class UserController extends Controller
      * Display a listing of the resource.
      *
      * @return 
+
      */
     public function index()
     {
@@ -24,6 +25,7 @@ class UserController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+
      * @return 
      */
     public function create()
@@ -35,7 +37,9 @@ class UserController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+
      * @return 
+
      */
     public function store(Request $request)
     {
@@ -47,7 +51,9 @@ class UserController extends Controller
 
         $user = new User($request->all());
         $user->password = bcrypt($request->password);
+
         $user->assignRole('User');
+
         $user->save();
 
         return redirect()->route('admin.users.index')->with('success', 'User added successfully');
@@ -87,11 +93,22 @@ class UserController extends Controller
         //
     }
 
+
+    public function contactMessages()
+    {
+        $contactMessages = ContactMessage::all();
+        return view('admin.contact-messages.index', compact('contactMessages'));
+    }
+
+
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
+
      * @return 
+
      */
     public function destroy(User $user)
     {

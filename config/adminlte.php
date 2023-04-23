@@ -21,11 +21,13 @@ return [
     'menu' => [
         [
             'type'       => 'sidebar-custom-search',
+
             'text'       => 'Search',         // Placeholder for the underlying input.
             'url'        => 'search', // The url used to submit the data ('#' by default).
             'method'     => 'get',           // 'get' or 'post' ('get' by default).
             'input_name' => 'search_query',      // Name for the underlying input ('adminlteSearch' by default).
             'id'         => ''   // ID attribute for the underlying input (optional).
+
         ],
         [
             'text' => 'Dashboard',
@@ -38,6 +40,7 @@ return [
             'icon' => 'fas fa-fw fa-users',
         ],
         [
+
             'text' => 'Discussion',
             'url'  => 'threads',
             'icon' => 'fas fa-fw fa-users',
@@ -46,11 +49,14 @@ return [
             'text' => 'Documentation',
             'url'  => 'aboutus',
             'icon' => 'fas fa-fw fa-users',
+
         ],
         [
             'text' => 'Resources',
             'url'  => 'education',
+
             'icon' => 'fas fa-fw fa-users',
+
         ],
         [
             'type'         => 'navbar-notification',
@@ -68,7 +74,7 @@ return [
                 'period' => 30,                       // The update period for get new data (in seconds, optional).
             ],
         ],
-        
+
     ],
 
 ];

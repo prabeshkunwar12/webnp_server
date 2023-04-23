@@ -68,5 +68,6 @@ class Kernel extends HttpKernel
         'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
         'admin' => \JeroenNoten\LaravelAdminLte\Http\Middleware\AdminMiddleware::class,
         'admin' => \App\Http\Middleware\EnsureUserIsAdmin::class,
+
     ];
 }
