@@ -102,7 +102,7 @@
         <div class="auth">
           <a class="nav-link" style="display: inline-block;" href="/login">Login</a>
           <a class="nav-link" style="display: inline-block;" href="/register">Register</a>
-        </div>   
+        </div>  
 
     </body>
 </html>
