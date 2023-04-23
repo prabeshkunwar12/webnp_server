@@ -56,6 +56,9 @@
                 <li class="nav-item <?php echo request()->is('/') ? 'active' : ''; ?>">
                   <a class="nav-link" href="/">Home</a>
                 </li>
+                <li class="nav-item <?php echo request()->is('discussion_posts') ? 'active' : ''; ?>">
+                  <a class="nav-link" href="/discussion_posts">Posts</a>
+                </li>
                 <li class="nav-item <?php echo request()->is('contact') ? 'active' : ''; ?>">
                   <a class="nav-link" href="/contact">Contact</a>
                 </li>
@@ -69,9 +72,23 @@
                   <a class="nav-link" href="/education">Education</a>
                 </li>
               </div>
-              <form class="d-flex" role="search" action = "/search" method="GET">
-                <input type="text" class="search-click" name="search_query" placeholder="Search here..." />
-              </form>                            
+              <form class="form-inline my-2" action="http://127.0.0.1:8000/search" method="get">
+                <input type="hidden" >
+
+                <div class="input-group">
+
+                    
+                    <input class="form-control form-control-sidebar" type="search" id="" name="search_query" placeholder="Search Here..." aria-label="Search">
+
+                    
+                    <div class="input-group-append">
+                        <button class="btn btn-sidebar" type="submit">
+                            <i class="fas fa-fw fa-search"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </form>                         
               
             </div>
           </div>

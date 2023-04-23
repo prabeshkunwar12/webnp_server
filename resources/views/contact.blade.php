@@ -69,6 +69,7 @@
               text-align: center;
           }
         </style>
+        
         <?php @include 'Footer/footer.blade.php' ?>
 
       </body>

@@ -8,7 +8,6 @@ use App\Http\Controllers\PostsController;
 
 $homeCon = new HomeController();
 $postCon = new PostsController();
-setcookie('name1',2,600);
 ?>
 <!DOCTYPE HTML>
     <html>

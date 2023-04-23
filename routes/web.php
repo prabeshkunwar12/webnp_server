@@ -19,6 +19,9 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ContactMessageController;
+use App\Http\Controllers\DiscussionPostController;
+use App\Http\Controllers\DiscussionCommentController;
+use App\Http\Controllers\DiscussionLikeController;
 
 //
 
@@ -84,10 +87,11 @@ Route::post('/contact', [App\Http\Controllers\ContactController::class, 'store']
 Route::resource('posts', 'App\Http\Controllers\PostsController');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('/homepage');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
+    
 
 
 Route::middleware('auth')->group(function () {
@@ -117,7 +121,31 @@ Route::middleware('auth')->group(function () {
 
     Route::post('reset-password', [NewPasswordController::class, 'store'])
         ->name('password.store');
+        Route::get('verify-email', [EmailVerificationPromptController::class, '__invoke'])
+                    ->name('verification.notice');
+    
+        Route::get('verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
+                    ->middleware(['signed', 'throttle:6,1'])
+                    ->name('verification.verify');
+    
+        Route::post('email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
+                    ->middleware('throttle:6,1')
+                    ->name('verification.send');
+    
+        Route::get('confirm-password', [ConfirmablePasswordController::class, 'show'])
+                    ->name('password.confirm');
+    
+        Route::post('confirm-password', [ConfirmablePasswordController::class, 'store']);
+    
+        Route::put('password', [PasswordController::class, 'update'])->name('password.update');
+    
+        Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
+                    ->name('logout');
         
+        Route::get('threads', [ThreadController::class, 'index'])->name('threads.index');
+        Route::resource('threads', ThreadController::class)->except(['edit', 'update', 'destroy']);
+        Route::post('threads/{thread}/replies', [ReplyController::class, 'store'])->name('replies.store');
+        Route::delete('/threads/{thread}', [ThreadController::class,'destroy'])->name('threads.destroy');
 
     Route::group(['middleware' => ['role:User|Editor|Nurse Practioner|Admin']], function () {
         Route::get('/profile', [App\Http\Controllers\Auth\ProfileController::class, 'create'])->name('profile.create');
@@ -158,14 +186,11 @@ Route::middleware('auth')->group(function () {
 
     Route::group(['middleware' => ['role:User']], function () {
         Route::get('/dashboard', function () {
-            return view('dashboard');
+            return view('/homepage');
     })->middleware(['auth', 'verified'])->name('dashboard');
     });
 
-    Route::get('threads', [ThreadController::class, 'index'])->name('threads.index');
-    Route::resource('threads', ThreadController::class)->except(['edit', 'update', 'destroy']);
-    Route::post('threads/{thread}/replies', [ReplyController::class, 'store'])->name('replies.store');
-    Route::delete('/threads/{thread}', [ThreadController::class,'destroy'])->name('threads.destroy');
+
                     
     Route::middleware('guest')->group(function () {
         
@@ -197,7 +222,12 @@ Route::middleware('auth')->group(function () {
                     
     });
 
-    
+    Route::resource('discussion_posts', DiscussionPostController::class)->middleware('auth');
+Route::post('discussion_posts/{discussion_post}/comments', [DiscussionCommentController::class, 'store'])->middleware('auth')->name('discussion_comments.store');
+Route::post('discussion_posts/{discussion_post}/likes', [DiscussionLikeController::class, 'store'])->middleware('auth')->name('discussion_likes.store');
+Route::delete('discussion_posts/{discussion_post}/likes', [DiscussionLikeController::class, 'destroy'])->middleware('auth')->name('discussion_likes.destroy');
+
+
     Route::middleware(['admin'])->prefix('admin')->group(function () {
         Route::get('/', function () {
             return view('admin.dashboard');
@@ -209,4 +239,6 @@ Route::middleware('auth')->group(function () {
         Route::delete('/users/{user}/destroy', [UserController::class, 'destroy'])->name('admin.users.destroy');
 
         Route::get('/contact-messages', [ContactMessageController::class, 'index'])->name('admin.contact-messages.index');
+        Route::get('/notifications/show', [ContactMessageController::class, 'index'])->name('admin.contact-messages.index');
+
     });
