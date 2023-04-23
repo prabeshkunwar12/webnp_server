@@ -3,9 +3,8 @@
 <head>
   <title>{{ $thread->title }}</title>
   <style>
-    <style>
 		/* Custom styles */
-		body {
+		.body {
 			background-color: #f8f9fa;
 		}
 		.container {
@@ -87,6 +86,7 @@
 
 @section('content')
 <div class="container py-3">
+  <a href="{{ URL::previous() }}" class="btn btn-secondary btn-sm">Back</a>
   <div class="row">
     <div class="col-md-8">
       <div class="card">
