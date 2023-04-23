@@ -1066,4 +1066,13 @@
   .u-section-1 .u-image-15 {
     height: 283px;
   }
+
+
+  @media screen and (max-width: 950px){
+    .u-repeater{
+      display: none;
+    }
+
+  }
+  
 }

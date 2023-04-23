@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 class Posts extends Model 
 {
     use HasFactory;
-    use InteractsWithViews;
+    
 
     protected $table = 'posts';
 

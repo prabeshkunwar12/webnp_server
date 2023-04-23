@@ -28,11 +28,25 @@ class RoleAndPermissionSeeder extends Seeder
         Permission::create(['name' => 'view discussion forum']);
         
         $SuperAdminRole = Role::create(['name' => 'SuperAdmin']);
+        $AdminRole = Role::create(['name' => 'Admin']);
         $editorRole = Role::create(['name' => 'Editor']);
         $nurseRole = Role::create(['name' => 'Nurse Practioner']);
         $userRole = Role::create(['name' => 'User']);
 
         $SuperAdminRole->givePermissionTo([
+            'view unapproved posts',
+            'create posts',
+            'approve posts',
+            'edit own posts',
+            'edit all posts',
+            'delete own posts',
+            'delete any post',
+            'approve nurse account',
+            'delete any account',
+            'view discussion forum',
+        ]);
+
+        $AdminRole->givePermissionTo([
             'view unapproved posts',
             'create posts',
             'approve posts',

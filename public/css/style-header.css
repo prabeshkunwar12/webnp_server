@@ -51,13 +51,14 @@
 
 .search-click input {
   background: transparent;
-  border: none;
   outline: none;
   position: absolute;
   width: 300px;
   height: 50px;
   left: 0%;
   padding: 10px;
+  border: 10px;
+
 }
 
 .container_nav {
@@ -81,6 +82,8 @@
 
 .navbar-collapse {
   justify-content: flex-end;
+  font-size: 1.1rem;
+
 }
 
 .navbar-nav .active > .nav-link {
@@ -89,4 +92,20 @@
   border-color: #007bff;
   border-radius: 10px;
   padding: 5px 15px;
+
+  font-size: 1.1rem;
+}
+
+.auth .nav-link{
+  font-size: 1.1rem;
+  display: inline-block;
+}
+
+@media screen and (max-width: 950px){
+  .intro-image{
+    display: none;
+  }
+
+  
+
 }

@@ -10,9 +10,11 @@ use App\Http\Controllers\ArticlesController;
 
 $homeCon = new HomeController();
 $postCon = new PostsController();
+
 $subCatCon = new SubCategoriesController();
 $articleCon = new ArticlesController();
 setcookie('name1',2,600);
+
 ?>
 <!DOCTYPE HTML>
     <html>
@@ -29,10 +31,25 @@ setcookie('name1',2,600);
     <body>
         <?php @include 'header.blade.php'?>
 
-        <div class="intro" style="overflow: hidden;">
-            <div class="intro-image" style="overflow: hidden;"">
-                <img src="/imgs/logo.png" alt="Error">
-            </div>
+        <div class="auth">
+        @if (\Auth::user())
+        <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    
+                    <a  href="route('logout')"
+                            onclick="event.preventDefault();
+                            this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </a>
+                </form>
+        @else
+        <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/register">Register</a>
+        @endif
+        </div>
+        <div class="intro-image">
+            <img src="/imgs/logo.png" alt="Error" class="img-fluid">
+
         </div>
 
         <figure class="text-center">
@@ -56,6 +73,7 @@ setcookie('name1',2,600);
                     </div>
                     <hr>
                 </div>
+
                 <div class="carousel">
                     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -108,6 +126,7 @@ setcookie('name1',2,600);
                                                     ';
                                                 }
                                             ?>
+
                                         </div>
                                     </div>
                                 </section>
@@ -216,6 +235,7 @@ setcookie('name1',2,600);
                                             ?>
                                         </div>
                                     </div>
+
                                 </section>
                             </div>
                         </div>    
@@ -470,10 +490,11 @@ setcookie('name1',2,600);
 
         <!-- Introduction -->
         <div class="container-fluid bg-light shadow">
-            <h1 style="text-align: center;">Introduction</h1>
 
-            <div class="row" >
-                <div class="col-3 p-3" style="text-align: center;"><img class="rounded-circle" src="imgs/gail1.jpg"></div>
+            <h1 style="text-align: center;">Introduction</h1>
+                
+            <div class="row " >
+                <div class="col-3 p-3 intro-header"><img class="rounded-circle" src="imgs/gail1.jpg"></div>
 
                 <div class="col-9 p-3" text-align="center">
                     <i>
@@ -503,5 +524,6 @@ setcookie('name1',2,600);
 
         
         <?php @include 'Footer/footer.blade.php' ?>
+        
         </body>
     </html>

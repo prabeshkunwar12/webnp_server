@@ -13,7 +13,7 @@
 }
 
 .recentarticlessection{
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
     
     height: auto;
     background-repeat: no-repeat;
@@ -60,18 +60,32 @@
     box-sizing: border-box;
 }
 
+.intro-header{
+    text-align: center;
+}
+
+.intro-header img{
+    padding-top: 15px;
+}
+
 @media screen and (max-width: 950px) {
     .vanish{
       display: none; /* Sides get removed when the viewport is 800px or smaller */
     }
 
-    .see_all{
-        display: none; /* Sides get removed when the viewport is 800px or smaller */
+     .seeall_main .see_all{
+        width: 60%;
+        float: inline-end;  
       }
     
     .row{
         justify-content: center;
     }
+
+    .intro-header{
+        display: none;
+    }
+
 }
 
 
@@ -160,6 +174,7 @@ hr{
     display: flex;
     flex-wrap: wrap;
     color: var(--dark);
+    padding-bottom: 2.5rem;
 }
 
 .topicscol a{

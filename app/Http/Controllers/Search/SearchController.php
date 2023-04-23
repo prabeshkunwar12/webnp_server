@@ -22,10 +22,19 @@ class SearchController extends Controller
            $result = DB::table('Posts')
                 ->where('Posts.title', 'LIKE', "%$search%")
                 //->limit(5)
-                ->simplePaginate(2);
+                ->simplePaginate(5);
 
+            $resultCount = DB::table('Posts')
+            ->where('Posts.title', 'LIKE', "%$search%")
+            ->count();
+            
+            if($resultCount){
                 return view('search')
                 ->with('result', $result);
+            }
+            else{
+                return view('search')->with('result', 0);
+            }
         }
         else{
             return view('homepage');

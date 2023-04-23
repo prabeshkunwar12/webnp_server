@@ -21,11 +21,13 @@ return [
     'menu' => [
         [
             'type'       => 'sidebar-custom-search',
-            'text'       => 'search',         // Placeholder for the underlying input.
-            'url'        => 'sidebar/search', // The url used to submit the data ('#' by default).
-            'method'     => 'post',           // 'get' or 'post' ('get' by default).
-            'input_name' => 'searchVal',      // Name for the underlying input ('adminlteSearch' by default).
-            'id'         => 'sidebarSearch'   // ID attribute for the underlying input (optional).
+
+            'text'       => 'Search',         // Placeholder for the underlying input.
+            'url'        => 'search', // The url used to submit the data ('#' by default).
+            'method'     => 'get',           // 'get' or 'post' ('get' by default).
+            'input_name' => 'search_query',      // Name for the underlying input ('adminlteSearch' by default).
+            'id'         => ''   // ID attribute for the underlying input (optional).
+
         ],
         [
             'text' => 'Dashboard',
@@ -38,24 +40,23 @@ return [
             'icon' => 'fas fa-fw fa-users',
         ],
         [
-            'text' => 'Messages',
-            'url'  => 'admin/contact-messages',
-            'icon' => 'fas fa-envelope',
-        ],
-        [
+
             'text' => 'Discussion',
-            'url'  => 'discussion',
-            'icon' => 'far fa-comments',
+            'url'  => 'threads',
+            'icon' => 'fas fa-fw fa-users',
         ],
         [
             'text' => 'Documentation',
-            'url'  => 'Documentation',
-            'icon' => 'fas fa-book',
+            'url'  => 'aboutus',
+            'icon' => 'fas fa-fw fa-users',
+
         ],
         [
             'text' => 'Resources',
             'url'  => 'education',
-            'icon' => 'fas fa-folder',
+
+            'icon' => 'fas fa-fw fa-users',
+
         ],
         [
             'type'         => 'navbar-notification',
@@ -73,20 +74,7 @@ return [
                 'period' => 30,                       // The update period for get new data (in seconds, optional).
             ],
         ],
-        [
-            'text'    => 'Settings',
-            'icon'    => 'fas fa-fw fa-cogs',
-            'submenu' => [
-                [
-                    'text' => 'General Settings',
-                    'url'  => 'admin/settings/general',
-                ],
-                [
-                    'text' => 'Email Settings',
-                    'url'  => 'admin/settings/email',
-                ],
-            ],
-        ],
+
     ],
 
 ];

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/css/style-header.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   </head>
-  <body>  
+  <body>
+
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 
@@ -45,7 +46,8 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
                 <div class="container_nav">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/homepage">
+
                       <img src="/imgs/logo.png" alt="Bootstrap" width="180" height="80">
                     </a>
                 </div>
@@ -57,6 +59,10 @@
                 <li class="nav-item <?php echo request()->is('/') ? 'active' : ''; ?>">
                   <a class="nav-link" href="/">Home</a>
                 </li>
+                <li class="nav-item <?php echo request()->is('discussion_posts') ? 'active' : ''; ?>">
+                  <a class="nav-link" href="/discussion_posts">Posts</a>
+                </li>
+
                 <li class="nav-item <?php echo request()->is('contact') ? 'active' : ''; ?>">
                   <a class="nav-link" href="/contact">Contact</a>
                 </li>
@@ -70,11 +76,25 @@
                   <a class="nav-link" href="/education">Education</a>
                 </li>
               </div>
+              <form class="form-inline my-2" action="http://127.0.0.1:8000/search" method="get">
+                <input type="hidden" >
+
+                <div class="input-group">
+
+                    
+                    <input class="form-control form-control-sidebar" type="search" id="" name="search_query" placeholder="Search Here..." aria-label="Search">
+
+                    
+                    <div class="input-group-append">
+                        <button class="btn btn-sidebar" type="submit">
+                            <i class="fas fa-fw fa-search"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </form>                         
               
-            
-              <form class="d-flex" role="search" action = "/search" method="GET">
-                <input type="text" class="search-click" name="search_query" placeholder="Search here..." />
-              </form>                            
+
             </div>
           </div>
         </nav>
