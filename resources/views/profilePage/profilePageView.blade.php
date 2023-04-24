@@ -84,15 +84,19 @@
 <img src="imgs/avatar.png" alt="User" class="rounded-circle" width="150">
 <div class="mt-3">
 <h4><?php echo $user->name ?></h4>
-<p class="text-secondary mb-1"><?php echo $user->getRoleNames()[0]; ?></p>
-
-
+</div>
+@if(Auth::user()->isAdmin())
+<div class="mt-3">
+<h4><div class="col-sm-12">
+<a class="btn btn-info " target="_self" href="{{ route('admin.dashboard') }}">Admin Dashboard</a>
+</div></h4>
+</div>
+@endif
 </div>
 </div>
 </div>
 </div>
 
-</div>
 <div class="col-md-8">
 <div class="card mb-3">
 <div class="card-body">
@@ -113,14 +117,7 @@
 <?php echo $user->email ?>
 </div>
 </div>
-<hr>
-<div class="row">
-<div class="col-sm-3">
-<h6 class="mb-0">Role</h6>
-</div>
-<div class="col-sm-9 text-secondary">
-<?php echo $user->getRoleNames()[0]; ?></div>
-</div>
+
 <hr>
 
 <div class="row">
@@ -139,6 +136,7 @@
 </div>
 </div>
 </div>
+
 <div class="row gutters-sm">
 <div class="col-sm-6 mb-3">
 <div class="card h-100">
@@ -169,11 +167,11 @@
                 <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
             </div>
 
-            <div class=" justify-end">
-                <button on:click="$dispatch('close')">
+            <div class=" justify-end ">
+                <button class = "btn btn-info" on:click="$dispatch('close')">
                     {{ __('Cancel') }}
                 </button>
-                <button>
+                <button class = "btn btn-info">
                     {{ __('Delete Account') }}
                 </button>
             </div>
@@ -190,6 +188,7 @@
 </div>
 </div>
 </div>
+
 </div>
 </div>
 </div>

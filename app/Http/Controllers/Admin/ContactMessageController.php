@@ -14,5 +14,10 @@ class ContactMessageController extends Controller
         return view('admin.contact-messages.index', compact('contactMessages'));
     }
 
+    public function destroy(ContactMessage $message)
+    {
+        $message->delete();
+        return redirect()->route('admin.contact-messages.index')->with('success', 'Message deleted successfully');
+    }
     // Add other methods as needed
 }

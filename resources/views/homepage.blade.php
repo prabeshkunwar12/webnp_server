@@ -41,7 +41,8 @@ setcookie('name1',2,600);
                             this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </a>
-                </form>
+        </form>
+        <a href = "/profile"> Profile</a>
         @else
         <a class="nav-link" href="/login">Login</a>
             <a class="nav-link" href="/register">Register</a>
@@ -77,10 +78,21 @@ setcookie('name1',2,600);
                 <div class="carousel">
                     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
+                    <div>                                
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" >
+                        <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
                             <div class="carousel-item active">
                                 <section class="section">
                                     <div class="container-fluid mx-auto">
                                         <div class="row text-center">
+                                            
                                             <?php
                                                 for ($i = 1; $i <= 3; $i += 1){
                                                     echo '
@@ -240,15 +252,7 @@ setcookie('name1',2,600);
                             </div>
                         </div>    
                     </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    
                 </div>
             </div>    
         </div> 
@@ -311,6 +315,14 @@ setcookie('name1',2,600);
                 <div class="carousel">
                     <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                             <div class="carousel-item">
                                 <section class="section">
                                     <div class="container-fluid mx-auto">
@@ -473,14 +485,7 @@ setcookie('name1',2,600);
                         </div>
                     </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    
                 </div>
             </div>    
         </div>   

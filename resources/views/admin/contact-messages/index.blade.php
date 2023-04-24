@@ -1,6 +1,8 @@
 @extends('adminlte::page')
 
 @section('content')
+<?php @include 'header.blade.php'?>
+
     <h1>Messages</h1>
 
     <table class="table">
@@ -19,6 +21,13 @@
                     <td>{{ $message->email }}</td>
                     <td>{{ $message->message }}</td>
                     <td>{{ $message->created_at }}</td>
+                    <td>
+                                <form action="{{ route('admin.contact-messages.destroy', $message->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
                 </tr>
             @endforeach
         </tbody>
