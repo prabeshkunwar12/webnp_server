@@ -84,7 +84,6 @@
 <img src="imgs/avatar.png" alt="User" class="rounded-circle" width="150">
 <div class="mt-3">
 <h4><?php echo $user->name ?></h4>
-<p class="text-secondary mb-1"><?php echo $user->getRoleNames()[0]; ?></p>
 
 
 </div>
@@ -113,14 +112,7 @@
 <?php echo $user->email ?>
 </div>
 </div>
-<hr>
-<div class="row">
-<div class="col-sm-3">
-<h6 class="mb-0">Role</h6>
-</div>
-<div class="col-sm-9 text-secondary">
-<?php echo $user->getRoleNames()[0]; ?></div>
-</div>
+
 <hr>
 
 <div class="row">

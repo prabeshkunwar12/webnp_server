@@ -57,6 +57,9 @@ Route::get('/nursePost', function () {
     return view('nursePost');
 });
 
+Route::get('/dashboard', function () {
+    return view('homepage');
+});
 
 
 Route::get('/education', function () {
@@ -172,9 +175,9 @@ Route::middleware('auth')->group(function () {
         Route::post('threads/{thread}/replies', [ReplyController::class, 'store'])->name('replies.store');
         Route::delete('/threads/{thread}', [ThreadController::class,'destroy'])->name('threads.destroy');
 
-    Route::group(['middleware' => ['role:User|Editor|Nurse Practioner|Admin']], function () {
+    
         Route::get('/profile', [App\Http\Controllers\Auth\ProfileController::class, 'create'])->name('profile.create');
-    Route::get('/profileEdit', [App\Http\Controllers\Auth\ProfileController::class, 'edit'])->name('profile.edit');
+        Route::get('/profileEdit', [App\Http\Controllers\Auth\ProfileController::class, 'edit'])->name('profile.edit');
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
         
@@ -200,20 +203,15 @@ Route::middleware('auth')->group(function () {
                     ->name('logout');
         });
        
-});
  
 
 
-    Route::group(['middleware' => ['role:Admin']], function () {
+        Route::middleware(['admin'])->prefix('admin')->group( function () {
         
         Route::get('dashboard', [Admin\DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
-     });
-
-    Route::group(['middleware' => ['role:User']], function () {
-        Route::get('/dashboard', function () {
-            return view('/homepage');
-    })->middleware(['auth', 'verified'])->name('dashboard');
-    });
+        });
+       
+  
 
 
                     

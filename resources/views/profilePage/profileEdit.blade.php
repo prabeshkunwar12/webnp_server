@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Edit Profile</title>
 <meta charset="utf-8">
 
 
@@ -81,13 +82,7 @@
 </div>
 </div>
 </div>
-<div class="row mb-3">
-<div class="col-sm-3">
-<h6 class="mb-0">Role</h6>
-</div>
-<div class="col-sm-9 text-secondary">
-<?php echo $user->getRoleNames()[0]; ?></div>
-</div>
+
 
 
 <div class="row">
