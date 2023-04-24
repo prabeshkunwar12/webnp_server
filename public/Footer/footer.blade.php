@@ -35,7 +35,7 @@
               <h3>WebNP</h3>
               <p>
                 <strong>Phone:</strong> +1 234 5678 910<br>
-                <strong>Email:</strong> webnp@example.com<br>
+                <strong>Email:</strong> gmacartney@upei.ca<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -84,7 +84,10 @@
         &copy; Copyright <strong><span>WebNP</span></strong>. All Rights Reserved
       </div>
       <div class="disclaimer">
-        Disclaimer
+        
+
+Disclaimer: This is the personal blog of Dr Gail Macartney, RN(NP), PhD, CON(C). The resources found on these pages are intended to inform NP students and care providers. Healthcare professionals should also consider other sources of up to date information, their own clinical judgment and the preferences of their patients in their decisions.
+
       </div>
     </div>
   </footer><!-- End Footer -->

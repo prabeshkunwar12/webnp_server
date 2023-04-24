@@ -69,6 +69,14 @@
               margin: 5%;
               text-align: center;
           }
+
+          @media screen and (max-width: 950px) {
+            .contact-form-container{
+                width: 250px;
+                left: 20%;
+                height: 50%;
+            }
+          }
         </style>
         
         <?php @include 'Footer/footer.blade.php' ?>

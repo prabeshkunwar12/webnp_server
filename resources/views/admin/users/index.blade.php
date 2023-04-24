@@ -7,6 +7,8 @@
 @stop
 
 @section('content')
+<?php @include 'header.blade.php'?>
+
     <div class="card">
         <div class="card-header">
             <a href="{{ route('admin.users.create') }}" class="btn btn-primary">Add User</a>

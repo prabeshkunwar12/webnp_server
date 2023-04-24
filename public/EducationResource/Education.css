@@ -1069,10 +1069,31 @@
 
 
   @media screen and (max-width: 950px){
-    .u-repeater{
+     .img-mobile{
       display: none;
     }
 
+    .u-container-layout, .u-container-style, .u-repeater-item{
+      max-height: 20%;
+      max-width: 55%;
+    }
+
+    .u-text{
+      align-self: flex-start;
+      
+    }
+
+    .u-section-1 .u-list-item{
+      box-shadow: none;
+    }
+
+    .u-text .u-btn{
+      font-size: 80%;
+    }
+
+    .u-repeater, .u-repeater-1, .u-list, u.layout-grid, .education{
+      max-height: 50%;
+    }
   }
   
 }
