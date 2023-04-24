@@ -89,7 +89,7 @@
 <div class="col-sm-3"></div>
 <div class="col-sm-9 text-secondary">
 <div class="flex items-center gap-4">
-            <button>{{ __('Save') }}</button>
+            <button class = "btn btn-info">{{ __('Save') }}</button>
 
             @if (session('status') === 'profile-updated')
                 <p
@@ -132,7 +132,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <button>{{ __('Save') }}</button>
+            <button class = "btn btn-info">{{ __('Save') }}</button>
             
             @if (session('status') === 'password-updated')
                 <p

@@ -4,11 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4c898abfeb4c3c267547143c174fb90",
+
+    "content-hash": "14d0890ca89b533eb0d0c6a98c2bbf36",
+
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
             "version": "v3.2.0",
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColorlibHQ/AdminLTE.git",
@@ -52,6 +55,7 @@
         {
             "name": "asm89/stack-cors",
             "version": "v2.1.1",
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/asm89/stack-cors.git",

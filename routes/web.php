@@ -32,7 +32,9 @@ use App\Http\Controllers\DiscussionLikeController;
 Route::get('/', function () {
     return view('homepage');
 });
-
+Route::get('/home', function () {
+    return view('homepage');
+});
 Route::get('/homepage', function () {
     
     return view('homepage');
@@ -263,6 +265,8 @@ Route::delete('discussion_posts/{discussion_post}/likes', [DiscussionLikeControl
 
         Route::get('/contact-messages', [ContactMessageController::class, 'index'])->name('admin.contact-messages.index');
         Route::get('/notifications/show', [ContactMessageController::class, 'index'])->name('admin.contact-messages.index');
+        Route::delete('/notifications/show/{message}/destroy', [ContactMessageController::class, 'destroy'])->name('admin.contact-messages.destroy');
 
+        
     });
 

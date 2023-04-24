@@ -48,7 +48,7 @@
                   </p>
                   <p class="u-text u-text-4" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-direction="" data-animation-delay="250">
                   </p>
-                  <a href="#" class="u-active-palette-1-base u-align-center u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-8 u-text-active-white u-text-hover-white u-btn-2" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-direction="Up" data-animation-delay="500">Contact us</a>
+                  <a href="/contact" class="u-active-palette-1-base u-align-center u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-8 u-text-active-white u-text-hover-white u-btn-2" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-direction="Up" data-animation-delay="500">Contact us</a>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@
     <section class="u-align-center u-clearfix u-section-2" id="carousel_6861">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Features</h2>
-        <p class="u-text u-text-default u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+        
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
             <div class="u-container-style u-list-item u-repeater-item">
@@ -100,7 +100,7 @@
                 <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
                   <div class="u-container-layout u-valign-top u-container-layout-2">
                     <h4 class="u-text u-text-3">Canadian Content</h4>
-                    <p class="u-text u-text-4">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                    <p class="u-text u-text-4">We do our best to find content that is relevant to Canadian care providers.</p>
                   </div>
                 </div>
               </div>
@@ -112,7 +112,7 @@
                 <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-2">
                   <div class="u-container-layout u-valign-top u-container-layout-4">
                     <h4 class="u-text u-text-5"> One click away</h4>
-                    <p class="u-text u-text-6">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                    <p class="u-text u-text-6">Simplicity is key. We offer easy links to reliable information.</p>
                   </div>
                 </div>
               </div>
@@ -122,9 +122,9 @@
                 <img alt="" class="u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-3" data-image-width="500" data-image-height="333" src="imgs/AboutUsImgs/billionphotos-2337387.jpg">
                 <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-3">
                   <div class="u-container-layout u-valign-top u-container-layout-6">
-                    <h4 class="u-text u-text-7">Evidence-informed
+                    <h4 class="u-text u-text-7">Evidence-Informed
                     </h4>
-                    <p class="u-text u-text-8">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                    <p class="u-text u-text-8">We take our time to ensure that resources are reliable and credible.</p>
                   </div>
                 </div>
               </div>
@@ -135,7 +135,7 @@
                 <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-4">
                   <div class="u-container-layout u-valign-top u-container-layout-8">
                     <h4 class="u-text u-text-9">Up to date</h4>
-                    <p class="u-text u-text-10">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                    <p class="u-text u-text-10">We strive to keep this a living site with regular and frequent updates.</p>
                   </div>
                 </div>
               </div>
@@ -192,61 +192,26 @@
             <div class="u-container-layout u-similar-container u-container-layout-1">
               <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">A</h2>
               <h3 class="u-text u-text-palette-1-base u-text-2">Goals and Mission</h3>
-              <p class="u-text u-text-3"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p class="u-text u-text-3"> We strive to be a vault of resources that nurse practioners and students can turn to for quick and reliable information.</p>
             </div>
           </div>
           <div class="u-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-2">
             <div class="u-container-layout u-similar-container u-container-layout-2">
               <h2 class="u-text u-text-default u-text-palette-1-base u-text-4">B</h2>
               <h3 class="u-text u-text-palette-1-base u-text-5">Our Services</h3>
-              <p class="u-text u-text-6"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p class="u-text u-text-6"> With careful curation by a certified Nurse Practioner and input from an expanding group of professionals, we highlight and guide users to relevant and up-to-date information. </p>
             </div>
           </div>
           <div class="u-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-3">
             <div class="u-container-layout u-similar-container u-container-layout-3">
               <h2 class="u-text u-text-default u-text-palette-1-base u-text-7">C</h2>
               <h3 class="u-text u-text-palette-1-base u-text-8">Join Us</h3>
-              <p class="u-text u-text-9"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p class="u-text u-text-9"> With your input, we can tailor this site into a valuable repository for Nurse Practioners everywhere.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="u-align-center u-clearfix u-valign-middle u-section-7" id="carousel_88df">
-      <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Meet The Team</h2>
-      <div class="u-expanded-width u-palette-1-base u-shape u-shape-rectangle u-shape-1"></div>
-      <div class="u-list u-list-1">
-        <div class="u-repeater u-repeater-1">
-          <div class="u-align-center u-container-style u-grey-5 u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-1">
-              <div alt="" class="u-image u-image-circle u-image-1" data-image-width="420" data-image-height="420"></div>
-              <h5 class="u-text u-text-default u-text-2">Timmy</h5>
-              <h6 class="u-custom-font u-text u-text-default u-text-font u-text-3"> Chief Operating Officer</h6>
-              <p class="u-text u-text-4">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-            </div>
-          </div>
-          <div class="u-align-center u-container-style u-grey-5 u-list-item u-repeater-item u-list-item-2">
-            <div class="u-container-layout u-similar-container u-container-layout-2">
-              <div alt="" class="u-image u-image-circle u-image-2" data-image-width="420" data-image-height="420"></div>
-              <h5 class="u-text u-text-default u-text-5">Tom</h5>
-              <h6 class="u-custom-font u-text u-text-default u-text-font u-text-6"> Assistant</h6>
-              <p class="u-text u-text-7">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-            </div>
-          </div>
-          <div class="u-align-center u-container-style u-grey-5 u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-3">
-              <div alt="" class="u-image u-image-circle u-image-3" data-image-width="420" data-image-height="420"></div>
-              <h5 class="u-text u-text-default u-text-8">Tim</h5>
-              <h6 class="u-custom-font u-text u-text-default u-text-font u-text-9">Head Nurse</h6>
-              <p class="u-text u-text-10">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      </p>
-    </section>
-
 
     <section class="u-clearfix u-section-10" id="sec-2e62">
       <div class="u-clearfix u-sheet u-sheet-1"></div>

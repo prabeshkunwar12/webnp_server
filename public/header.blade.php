@@ -98,6 +98,7 @@
           </div>
         </nav>
 
+
         <div class="auth">
           <?php if (Auth::check()): ?>
               <a class="nav-link" href="<?php echo route('profile.create'); ?>">Profile</a>
@@ -118,6 +119,7 @@
 
       </style>
       
+
 
     </body>
 </html>
