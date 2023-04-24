@@ -36,15 +36,15 @@ $postCon = new PostsController();
 
             @else
 
-                @foreach ($result as $post)
+                @foreach ($result as $article)
                 
 
                 <div class = "topicsbox container">
                     <ul class="topicslist">
                         <div class="topicscol">
                             <li>
-                                <a href ="{{ $post->content }}">
-                                    <h5>&#8827   {{ $post->id }}</h5> 
+                                <a href ="{{ $article->location}}">
+                                    <h5>&#8827   {{ $article->name }}</h5> 
                                 </a>
                             </li>
                             

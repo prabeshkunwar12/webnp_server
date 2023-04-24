@@ -19,13 +19,16 @@ class SearchController extends Controller
         $search = $request->query('search_query');
         
         if($search){
-           $result = DB::table('Posts')
-                ->where('Posts.title', 'LIKE', "%$search%")
+           $result = DB::table('articles')
+                ->where('name', 'LIKE', "%$search%")
                 //->limit(5)
                 ->simplePaginate(5);
 
-            $resultCount = DB::table('Posts')
-            ->where('Posts.title', 'LIKE', "%$search%")
+            $resultCount = DB::table('articles')
+            ->where('name', 'LIKE', "%$search%")
+            ->orWhere('group', 'LIKE', "%$search%")
+            ->orWhere('id', 'LIKE', "%$search%")
+            ->orWhere('location', 'LIKE', "%$search%")
             ->count();
             
             if($resultCount){
