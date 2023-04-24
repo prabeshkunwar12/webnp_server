@@ -14,7 +14,10 @@ public function index()
         $discussion_posts = DiscussionPost::latest()->paginate(10);
 
         // Pass the $discussion_posts variable to the view
-        return view('discussion_posts.index', compact('discussion_posts'));
+        return view('discussion_posts.index', [
+            'discussion_posts' => $discussion_posts,
+            'current_user' => Auth::user()
+        ]);
     }
 
 
@@ -29,26 +32,35 @@ public function index()
     }
 
     public function store(Request $request)
-    {
-        // Make sure the user is authenticated
-        if (!Auth::check()) {
-            return redirect()->route('login')->with('error', 'You must be logged in to create a post.');
-        }
-
-        $request->validate([
-            'title' => 'required|max:255',
-            'body' => 'required',
-        ]);
-
-        $post = new DiscussionPost([
-            'title' => $request->title,
-            'body' => $request->body,
-            'user_id' => Auth::id(),
-        ]);
-        $post->save();
-
-        return redirect()->route('discussion_posts.show', $post->id)->with('success', 'Post created successfully.');
+{
+    // Make sure the user is authenticated
+    if (!Auth::check()) {
+        return redirect()->route('login')->with('error', 'You must be logged in to create a post.');
     }
+
+    $request->validate([
+        'title' => 'required|max:255',
+        'body' => 'required',
+        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048' // validate the uploaded image file
+    ]);
+
+    $post = new DiscussionPost([
+        'title' => $request->title,
+        'body' => $request->body,
+        'user_id' => Auth::id(),
+    ]);
+
+    if ($request->hasFile('image')) {
+        $image = $request->file('image');
+        $imageName = time() . '_' . $image->getClientOriginalName();
+        $image->move(public_path('images'), $imageName);
+        $post->image = $imageName;
+    }
+    $post->save();
+
+    return redirect()->route('discussion_posts.show', $post->id)->with('success', 'Post created successfully.');
+}
+
 
     public function show(DiscussionPost $discussion_post)
     {

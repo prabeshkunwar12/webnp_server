@@ -38,8 +38,11 @@
                             @method('DELETE')
                             <button type="submit" class="btn btn-link btn-unlike p-0"><i class="fa fa-thumbs-down"></i> Unlike</button>
                         </form>
-                    </div>
-                    
+
+                        @foreach($discussion_posts as $discussion_post)
+
+                        @endforeach
+                    </div>                
                 </div>
             </div>
         @endforeach
