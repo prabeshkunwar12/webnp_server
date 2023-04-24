@@ -31,22 +31,6 @@ setcookie('name1',2,600);
     <body>
         <?php @include 'header.blade.php'?>
 
-        <div class="auth">
-        @if (\Auth::user())
-        <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    
-                    <a  href="route('logout')"
-                            onclick="event.preventDefault();
-                            this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </a>
-                </form>
-        @else
-        <a class="nav-link" href="/login">Login</a>
-            <a class="nav-link" href="/register">Register</a>
-        @endif
-        </div>
         <div class="intro-image">
             <img src="/imgs/logo.png" alt="Error" class="img-fluid">
 
