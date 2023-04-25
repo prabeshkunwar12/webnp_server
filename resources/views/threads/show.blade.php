@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<html>
 <head>
   <title>{{ $thread->title }}</title>
   <style>
@@ -83,7 +83,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
 </head>
 <?php @include 'header.blade.php'?>
-
+<body>
 @section('content')
 <div class="container py-3">
   <a href="{{ route('threads.index') }}" class="btn btn-secondary btn-sm">Back</a>
@@ -125,6 +125,8 @@
   </div>
 </div>
 <br><br><br><br>
-<?php @include 'Footer/footer.blade.php' ?>
+
 @endsection
+</body>
+</html>
 

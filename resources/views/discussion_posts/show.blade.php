@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $discussion_post->title }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
+    <?php @include 'header.blade.php'?>
     <style>
         body {
             background-color: #f8f9fa;
@@ -23,9 +25,10 @@
             color: #dc3545;
         }
     </style>
+    
 </head>
 <body>
-    <?php @include 'header.blade.php'?>
+    
     <div class="container mt-4">
         <h1>{{ $discussion_post->title }}</h1>
         <div class="edit_posts">
@@ -42,7 +45,7 @@
 
         <p>{{ $discussion_post->body }}</p>
         <p>Posted by {{ $discussion_post->user->name }} on {{ $discussion_post->created_at }}</p>
-        @if(auth()->check() && auth()->user()->id == $discussion_post->user->id)
+        @if((auth()->check() && auth()->user()->id == $discussion_post->user->id)||auth()->user()->isAdmin())
         <form action="{{ route('discussion_posts.destroy', $discussion_post->id) }}" method="POST" class="d-inline">
             @csrf
             @method('DELETE')

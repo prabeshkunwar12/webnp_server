@@ -13,7 +13,6 @@ $postCon = new PostsController();
 
 $subCatCon = new SubCategoriesController();
 $articleCon = new ArticlesController();
-setcookie('name1',2,600);
 
 ?>
 <!DOCTYPE HTML>
@@ -48,13 +47,15 @@ setcookie('name1',2,600);
         <!-- Recently Added Articles -->
         <div class="my-div" style="padding-top: 7rem;">
             <div class = "container recentarticlessection">
-                <div class="recentarticlesheader">
+            
+                <div class="recentarticlesheader-2">
+                <div class="seeall_main">
+                            <div class="see_all"><a href="/articles">SHOW ALL</a></div>
+                    </div>
                     <h3>
                         <b>Recent Articles</b>
                     </h3>
-                    <div class="seeall_main">
-                            <div class="see_all"><a href="/articles">SHOW ALL</a></div>
-                    </div>
+                    
                     <hr>
                 </div>
 
@@ -285,13 +286,14 @@ setcookie('name1',2,600);
             <!-- Most Viewed Section -->
         <div style="background-color: var(--tertiary);">
             <div class="container recentarticlessection " >
-                <div class="recentarticlesheader">
+                <div class="recentarticlesheader-2">
+                <div class="seeall_main">
+                        <div class="see_all"><a href="/articles">SHOW ALL</a></div>
+                    </div>
                     <h3>
                         <b>Popular Categories</b>
                     </h3>
-                    <div class="seeall_main">
-                        <div class="see_all"><a href="/articles">SHOW ALL</a></div>
-                    </div>
+                    
                         <p>Here are the categories most viewed by visitors to our site! </p>
                     <hr>
                 </div>

@@ -27,6 +27,11 @@
     padding-top: 5rem;
     margin-bottom: 5px;
 }
+.recentarticlesheader-2{
+
+    padding-top: 5rem;
+    margin-bottom: 5px;
+}
 
 .recentarticlesheader p{
     color: var(--dark);
@@ -225,7 +230,7 @@ body{
     float: right;
     margin: 0 auto;
     text-align: center;
-    padding-top: 0.75rem;
+    
     
 }
 .see_all{

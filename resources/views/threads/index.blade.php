@@ -108,9 +108,10 @@
     }
   </style>
   <title>Discussion Forum</title>
+  <?php @include 'header.blade.php'?>
 </head>
   <body>
-    <?php @include 'header.blade.php'?>
+    
 
     {{-- @section('content') --}}
     <div class="container">
@@ -129,7 +130,7 @@
                       </div>
                       <div class="card-footer"><h5 class="text-muted">Posted by <a href="#">{{ $thread->user->name }}</a> on {{ date("F j, Y", strtotime($thread->created_at)) }}</h5></div>
                       <div class="card-footer">
-                          @if (Auth::check() && Auth::user()->id === $thread->user_id)
+                          @if ((Auth::check() && Auth::user()->id === $thread->user_id)||auth()->user()->isAdmin())
                               <form action="{{ route('threads.destroy', $thread) }}" method="post">
                                   @csrf
                                   @method('DELETE')
