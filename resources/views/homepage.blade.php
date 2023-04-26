@@ -29,12 +29,11 @@ $articleCon = new ArticlesController();
 
     <body>
         <?php @include 'header.blade.php'?>
-
+        <div  class ="intro">
         <div class="intro-image">
             <img src="/imgs/logo.png" alt="Error" class="img-fluid">
-
         </div>
-
+        </div>
         <figure class="text-center">
             <blockquote class="blockquote">
               <p>"It is complicated knowing where to go for reliable information in clinical practice"</p>

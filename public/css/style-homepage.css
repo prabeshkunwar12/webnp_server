@@ -73,6 +73,13 @@
     padding-top: 15px;
 }
 
+.intro{
+    background-image: url("imgs/back.jpg");
+    height: 75%;
+    margin-bottom: 5%;
+    background-size: cover;
+}
+
 @media screen and (max-width: 950px) {
     .vanish{
       display: none; /* Sides get removed when the viewport is 800px or smaller */

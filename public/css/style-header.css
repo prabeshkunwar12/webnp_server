@@ -28,6 +28,10 @@
   margin-right: 1%;
 }
 
+.auth a {
+  color: #007bff;
+}
+
 .search-click {
   display: flex;
   justify-content: center;
