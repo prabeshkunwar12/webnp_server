@@ -18,68 +18,100 @@
             <form method="post" action="{{ route('contact.store') }}">
                 @csrf
                 <div class="contact-form">
-                    <h1>Get In Touch</h1>
+                    <h1 style="text-align:center">Get In Touch</h1>
                     @if(session('success'))
                         <div class="alert alert-success">
                             {{ session('success') }}
                         </div>
                     @endif
                     <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" value="{{ old('email') }}" required>
+                        <label for="email" style="font-weight: bold;">Email address</label>
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" value="{{ old('email') }}" required placeholder="Email">
                         @error('email')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea name="message" class="form-control" id="message" rows="7" required>{{ old('message') }}</textarea>
+                        <label for="message" style="font-weight: bold;">Message</label>
+                        <textarea name="message" class="form-control" id="message" rows="7" required placeholder="Enter your message here">{{ old('message') }}</textarea>
                         @error('message')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                      
                 </div>
             </form>
         </div>
 
         <style>
-          .map{
-              position: relative;
-              width: 100%;
-              height: 600px;
-              margin-bottom: 15%;
-          }
-
-          .contact-form-container {
+            .map{
+                position: relative;
+                width: 100%;
+                height: 600px;
+                margin-bottom: 15%;
+            }
+  
+            .contact-form-container {
+              padding: 10px;
+              width: 30%;
               position: absolute;
-              height: 60%;
-              top: 65%;
+              height: auto;
+              top: calc(60% + 200px);
               left: 35%;
               right: 35%;
-              bottom: 20%;
+              transform: translateY(-50%);
               box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-              background-color: aliceblue;
+              background-color: rgba(135, 206, 235, 0.5);
               border-radius: 10px;
           }
-
-
-          .contact-form{
-              margin: 5%;
-              text-align: center;
-          }
-
-          @media screen and (max-width: 950px) {
-            .contact-form-container{
-                width: 250px;
-                left: 20%;
-                height: 50%;
+  
+            .contact-form{           
+                width: 100%;
+                text-align: left;
             }
-          }
-        </style>
+  
+            /* Responsive styles */
+            @media (max-width: 1200px) {
+              .contact-form-container {
+                width: 50%;
+                left: 25%;
+                right: 25%;
+              }
+            }
+  
+            @media (max-width: 992px) {
+              .contact-form-container {
+                width: 70%;
+                left: 15%;
+                right: 15%;
+              }
+            }
+  
+            @media (max-width: 768px) {
+              .contact-form-container {
+                position: static;
+                transform: translateY(0);
+                width: 90%;
+                margin: 0 auto;
+              }
+            }
+  
+            @media (max-width: 576px) {
+              .contact-form-container {
+                width: 100%;
+                margin: 0;
+                padding: 10px;
+                border-radius: 0;
+              }
+            }
+  
+          </style>
+          
+          <?php @include 'Footer/footer.blade.php' ?>
+        </body>
+        </html>
         
-        <?php @include 'Footer/footer.blade.php' ?>
-      </body>
-      </html>
-      

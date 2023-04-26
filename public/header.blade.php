@@ -112,14 +112,6 @@
           <?php endif; ?>
       </div>
 
-      <style>
-        .auth a {
-            color: #007bff;
-        }
-
-      </style>
-      
-
 
     </body>
 </html>
