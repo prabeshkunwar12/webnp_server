@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\DiscussionPost;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -97,10 +98,12 @@ public function index()
         return redirect()->route('discussion_posts.show', $discussion_post->id)->with('success', 'Post updated successfully.');
     }
 
-    public function destroy(DiscussionPost $discussion_post)
-    {
+    public function destroy(DiscussionPost $discussion_post,Request $request)
+    {   
+        $user = $request->user();
+        
         // Make sure the user is authenticated and the owner of the post
-        if (!Auth::check() || Auth::id() !== $discussion_post->user_id) {
+        if ((!Auth::check() || Auth::id() !== $discussion_post->user_id)&&!($user->isAdmin())) {
             return redirect()->route('discussion_posts.index')->with('error', 'You are not authorized to delete this post.');
         }
 

@@ -18,18 +18,26 @@ $articleCon = new ArticlesController();
 <!DOCTYPE HTML>
     <html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link href= "{{asset('css/style-homepage.css')}}" rel="stylesheet" type = "text/css">
+    <link href= "{{asset('css/style-homepage.scss')}}" rel="stylesheet" type = "text/css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script class="u-script" type="text/javascript" src="AboutUsResource/jquery.js" defer=""></script>
+
+    <script class="u-script" type="text/javascript" src="/anim.js" defer=""></script>
+    <script src="/particles.js"></script>
+
     <script class="u-script" type="text/javascript" src="AboutUsResource/javascript.js" defer=""></script>
     <head>
         <title>WebNp - Homepage</title>
     </head>
 
     <body>
-        <?php @include 'header.blade.php'?>
-        <div  class ="intro">
+    <div id="particles-js"></div>
+
+
+
+<?php @include 'header.blade.php'?>
+        <div  class ="intro ">
         <div class="intro-image">
             <img src="/imgs/logo.png" alt="Error" class="img-fluid">
         </div>
@@ -42,10 +50,13 @@ $articleCon = new ArticlesController();
               Jodi,<cite title="Source Title">NP Student</cite>
             </figcaption>
           </figure>
-          
+
+ 
+
+
         <!-- Recently Added Articles -->
         <div class="my-div" style="padding-top: 7rem;">
-            <div class = "container recentarticlessection">
+            <div class = "container recentarticlessection jump-up">
             
                 <div class="recentarticlesheader-2">
                 <div class="seeall_main">
@@ -54,7 +65,7 @@ $articleCon = new ArticlesController();
                     <h3>
                         <b>Recent Articles</b>
                     </h3>
-                    
+                    <p>Take a Look at our Recent Posts, Vetted and Approved by Medical Professionals!</p>
                     <hr>
                 </div>
 
@@ -79,8 +90,8 @@ $articleCon = new ArticlesController();
                                             <?php
                                                 for ($i = 1; $i <= 3; $i += 1){
                                                     echo '
-                                                        <div class="col-lg-4">
-                                                            <a class="card border-0 text-dark" href="#" onclick="event.preventDefault();
+                                                        <div class="col-lg-4 ">
+                                                            <a class="card border-0 text-dark " href="#" onclick="event.preventDefault();
                                                                 console.log(\'starting\');
                                                                 $.ajax({
                                                                     
@@ -114,7 +125,7 @@ $articleCon = new ArticlesController();
                                                     echo '
                                                                 
                                                                 <span class="card-body mt-auto">
-                                                                    <h4 class="title mt-auto">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
+                                                                    <h4 class="title mt-auto border-dark">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
                                                                 </span>
                                                             </a>
                                                         </div>
@@ -168,7 +179,7 @@ $articleCon = new ArticlesController();
                                                     echo '
                                                                 
                                                                 <span class="card-body">
-                                                                    <h4 class="title mt-auto">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
+                                                                    <h4 class="title mt-auto border-dark">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
                                                                 </span>
                                                             </a>
                                                         </div>
@@ -221,7 +232,7 @@ $articleCon = new ArticlesController();
                                                     echo '
                                                                 
                                                                 <span class="card-body">
-                                                                    <h4 class="title mt-auto">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
+                                                                    <h4 class="title mt-auto border-dark">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
                                                                 </span>
                                                             </a>
                                                         </div>
@@ -243,20 +254,20 @@ $articleCon = new ArticlesController();
             
 
         <!-- List of Categories -->
-        <div class="container topicsheader">
+        <div class="container topicsheader jump-up">
             <h3>
-                <b>Recent Articles</b>
+                <b>All Articles</b>
             </h3>
             <div class="seeall_main">
                 <div class="see_all"><a href="/articles">SHOW ALL</a></div>
             </div>
-            <p>Take a Look at our Recent Posts, Vetted and Approved by Medical Professionals! </p>   
+            <p>Here's a selection of all of our articles! </p>   
         <hr>
         </div> 
         
-        <div class = "topicsbox container" style="padding-bottom: 7rem;">
+        <div class = "topicsbox container jump-up" style="padding-bottom: 7rem;">
             <ul class="topicslist">
-                <div class="topicscol" style="background-color: #423ba8; color: #ffffff;">
+                <div class="topicscol jump-up" style="background-color: #423ba8; color: #ffffff;">
                     
                     <?php
                         $articlesList = $articleCon->getRecentArticles();
@@ -284,9 +295,9 @@ $articleCon = new ArticlesController();
 
             <!-- Most Viewed Section -->
         <div style="background-color: var(--tertiary);">
-            <div class="container recentarticlessection " >
-                <div class="recentarticlesheader-2">
-                <div class="seeall_main">
+            <div class="container recentarticlessection jump-up" >
+                <div class="recentarticlesheader-2 jump-up">
+                <div class="seeall_main jump-up">
                         <div class="see_all"><a href="/articles">SHOW ALL</a></div>
                     </div>
                     <h3>
@@ -296,7 +307,7 @@ $articleCon = new ArticlesController();
                         <p>Here are the categories most viewed by visitors to our site! </p>
                     <hr>
                 </div>
-                <div class="carousel">
+                <div class="carousel jump-up">
                     <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="prev">
@@ -349,7 +360,7 @@ $articleCon = new ArticlesController();
                                                     echo '
                                                                 
                                                                 <span class="card-body mt-auto">
-                                                                    <h4 class="title mt-auto">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
+                                                                    <h4 class="title mt-auto border-dark">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
                                                                 </span>
                                                             </a>
                                                         </div>
@@ -402,7 +413,7 @@ $articleCon = new ArticlesController();
                                                     echo '
                                                                 
                                                                 <span class="card-body">
-                                                                    <h4 class="title mt-auto">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
+                                                                    <h4 class="title mt-auto border-dark">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
                                                                 </span>
                                                             </a>
                                                         </div>
@@ -455,7 +466,7 @@ $articleCon = new ArticlesController();
                                                     echo '
                                                                 
                                                                 <span class="card-body">
-                                                                    <h4 class="title mt-auto">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
+                                                                    <h4 class="title mt-auto border-dark">'.$subCatCon->getSubCategoryByID($i)->name.'</h4>
                                                                 </span>
                                                             </a>
                                                         </div>
@@ -478,7 +489,7 @@ $articleCon = new ArticlesController();
 
 
         <!-- Introduction -->
-        <div class="container-fluid bg-light shadow">
+        <div class="container-fluid bg-light shadow jump-up">
 
             <h1 style="text-align: center;">Introduction</h1>
                 

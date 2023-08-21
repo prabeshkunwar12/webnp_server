@@ -44,12 +44,12 @@
             </div>
         </div>     
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary headnavbar">
           <div class="container-fluid">
                 <div class="container_nav">
                     <a class="navbar-brand" href="/homepage">
 
-                      <img src="/imgs/logo.png" alt="Bootstrap" width="180" height="80">
+                      <img src="/imgs/logo.png"  width="180" height="80">
                     </a>
                 </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
